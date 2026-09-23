@@ -1,0 +1,404 @@
+{
+  "tankstellen": [
+    {
+      "id": 1,
+      "name": "OMV Musterstraße",
+      "kette": "OMV",
+      "koordinaten": {
+        "latitude": 48.2082,
+        "longitude": 16.3738
+      },
+      "preise": {
+        "diesel": 1.629,
+        "benzin": 1.589
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "07:00-22:00",
+        "sonntag": "07:00-20:00"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 124,
+        "durchschnittsbewertung": 4.3
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": true,
+        "staubsauger": false,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 2,
+      "name": "Shell Hauptstraße",
+      "kette": "Shell",
+      "koordinaten": {
+        "latitude": 48.2145,
+        "longitude": 16.3612
+      },
+      "preise": {
+        "diesel": 1.649,
+        "benzin": 1.599
+      },
+      "oeffnungszeiten": {
+        "montag": "05:30-23:00",
+        "dienstag": "05:30-23:00",
+        "mittwoch": "05:30-23:00",
+        "donnerstag": "05:30-23:00",
+        "freitag": "05:30-23:00",
+        "samstag": "06:00-23:00",
+        "sonntag": "06:00-22:00"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 98,
+        "durchschnittsbewertung": 4.1
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": true,
+        "staubsauger": true,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 3,
+      "name": "BP Ringstraße",
+      "kette": "BP",
+      "koordinaten": {
+        "latitude": 48.2019,
+        "longitude": 16.3895
+      },
+      "preise": {
+        "diesel": 1.619,
+        "benzin": 1.579
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 210,
+        "durchschnittsbewertung": 4.5
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": false,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": true,
+        "staubsauger": true,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 4,
+      "name": "JET Bahnhofstraße",
+      "kette": "JET",
+      "koordinaten": {
+        "latitude": 48.1933,
+        "longitude": 16.3504
+      },
+      "preise": {
+        "diesel": 1.589,
+        "benzin": 1.549
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-21:00",
+        "dienstag": "06:00-21:00",
+        "mittwoch": "06:00-21:00",
+        "donnerstag": "06:00-21:00",
+        "freitag": "06:00-22:00",
+        "samstag": "07:00-21:00",
+        "sonntag": "08:00-20:00"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 75,
+        "durchschnittsbewertung": 3.9
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": false,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": true,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 5,
+      "name": "Avanti Süd",
+      "kette": "Avanti",
+      "koordinaten": {
+        "latitude": 48.1811,
+        "longitude": 16.3766
+      },
+      "preise": {
+        "diesel": 1.569,
+        "benzin": 1.539
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 143,
+        "durchschnittsbewertung": 4.0
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": true,
+        "barzahlung": false
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 6,
+      "name": "Turmöl Nord",
+      "kette": "Turmöl",
+      "koordinaten": {
+        "latitude": 48.2357,
+        "longitude": 16.3821
+      },
+      "preise": {
+        "diesel": 1.599,
+        "benzin": 1.559
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-23:00",
+        "samstag": "07:00-23:00",
+        "sonntag": "07:00-21:00"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 167,
+        "durchschnittsbewertung": 4.4
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": true,
+        "staubsauger": true,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 7,
+      "name": "Eni West",
+      "kette": "Eni",
+      "koordinaten": {
+        "latitude": 48.2054,
+        "longitude": 16.3268
+      },
+      "preise": {
+        "diesel": 1.639,
+        "benzin": 1.609
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:30",
+        "dienstag": "06:00-22:30",
+        "mittwoch": "06:00-22:30",
+        "donnerstag": "06:00-22:30",
+        "freitag": "06:00-23:00",
+        "samstag": "07:00-23:00",
+        "sonntag": "07:00-22:00"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 64,
+        "durchschnittsbewertung": 3.8
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": true,
+        "staubsauger": false,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 8,
+      "name": "SOCAR Zentrum",
+      "kette": "SOCAR",
+      "koordinaten": {
+        "latitude": 48.2178,
+        "longitude": 16.4027
+      },
+      "preise": {
+        "diesel": 1.609,
+        "benzin": 1.569
+      },
+      "oeffnungszeiten": {
+        "montag": "07:00-22:00",
+        "dienstag": "07:00-22:00",
+        "mittwoch": "07:00-22:00",
+        "donnerstag": "07:00-22:00",
+        "freitag": "07:00-22:00",
+        "samstag": "07:00-21:00",
+        "sonntag": "08:00-20:00"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 81,
+        "durchschnittsbewertung": 4.2
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": true,
+        "staubsauger": true,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 9,
+      "name": "Diskont Tank Ost",
+      "kette": "Diskont",
+      "koordinaten": {
+        "latitude": 48.1986,
+        "longitude": 16.4215
+      },
+      "preise": {
+        "diesel": 1.549,
+        "benzin": 1.519
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 55,
+        "durchschnittsbewertung": 3.7
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": false,
+        "barzahlung": false
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": true
+      }
+    },
+    {
+      "id": 10,
+      "name": "OMV City",
+      "kette": "OMV",
+      "koordinaten": {
+        "latitude": 48.2251,
+        "longitude": 16.3459
+      },
+      "preise": {
+        "diesel": 1.659,
+        "benzin": 1.619
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-23:30",
+        "dienstag": "05:00-23:30",
+        "mittwoch": "05:00-23:30",
+        "donnerstag": "05:00-23:30",
+        "freitag": "05:00-24:00",
+        "samstag": "06:00-24:00",
+        "sonntag": "06:00-23:00"
+      },
+      "bewertung": {
+        "anzahlBewertungen": 302,
+        "durchschnittsbewertung": 4.6
+      },
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "applePay": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": true,
+        "staubsauger": true,
+        "luftpumpe": true
+      }
+    }
+  ]
+}

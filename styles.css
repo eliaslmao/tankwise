@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+
+/* HEADER */
+
+header {
+  background-color: #1f2937;
+  color: white;
+  padding: 35px 20px;
+}
+
+.header-inhalt {
+  max-width: 1100px;
+  margin: auto;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #d1d5db;
+}
+
+
+/* HAUPTBEREICH */
+
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+
+/* FILTER */
+
+.filter-bereich {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.filter-bereich h2 {
+  font-size: 26px;
+}
+
+#suche {
+  padding: 12px 16px;
+  width: 300px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  font-size: 15px;
+}
+
+#suche:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+
+/* TANKSTELLEN GRID */
+
+.tankstellen-liste {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+/* TANKSTELLEN KARTE */
+
+.tankstelle {
+  background-color: white;
+
+  border-radius: 15px;
+
+  padding: 22px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  transition: 0.2s;
+}
+
+.tankstelle:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* NAME */
+
+.tankstelle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.tankstelle h3 {
+  font-size: 21px;
+}
+
+.kette {
+  background-color: #e5e7eb;
+  padding: 5px 10px;
+
+  border-radius: 15px;
+
+  font-size: 13px;
+}
+
+
+/* PREISE */
+
+.preise {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.preis {
+  flex: 1;
+
+  background-color: #f3f4f6;
+
+  padding: 13px;
+
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.preis span {
+  display: block;
+
+  font-size: 13px;
+
+  color: #6b7280;
+
+  margin-bottom: 5px;
+}
+
+.preis strong {
+  font-size: 20px;
+
+  color: #16a34a;
+}
+
+
+/* INFOS */
+
+.info {
+  margin: 9px 0;
+  font-size: 14px;
+}
+
+
+/* AUSSTATTUNG */
+
+.ausstattung {
+  margin-top: 15px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.badge {
+  background-color: #dbeafe;
+  color: #1e40af;
+
+  padding: 6px 9px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  margin-top: 50px;
+
+  padding: 25px;
+
+  background-color: #1f2937;
+
+  color: #d1d5db;
+}
+
+
+/* HANDY */
+
+@media (max-width: 600px) {
+
+  .filter-bereich {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  #suche {
+      width: 100%;
+  }
+
+  header h1 {
+      font-size: 26px;
+  }
+
+}
