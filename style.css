@@ -1,0 +1,91 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; --ink: #182e2b; --muted: #64736e; --green: #166b52; --line: #dfe6e0; }
+body { margin: 0; background: #f6f8f4; color: var(--ink); font-family: Arial, sans-serif; }
+button, input { font: inherit; } a { color: inherit; } button { cursor: pointer; } button:disabled { cursor: default; opacity: .5; }
+:focus-visible { outline: 3px solid #e7a82c; outline-offset: 3px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 4vw; background: white; border-bottom: 1px solid var(--line); }
+.marke { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo { display: grid; place-items: center; width: 42px; height: 42px; background: #e9f2e8; border-radius: 13px; font-size: 23px; }
+h1 { margin: 0; font-size: 21px; letter-spacing: -.6px; } .ort { font-size: 13px; font-weight: bold; white-space: nowrap; }
+main { max-width: 1600px; margin: auto; padding: 0 4vw; }
+.einleitung { padding: 34px 0 28px; } .eyebrow { margin: 0 0 10px; font-size: 11px; font-weight: bold; letter-spacing: 2px; color: var(--green); }
+.einleitung h2 { margin: 0 0 12px; font-size: clamp(27px, 3vw, 40px); letter-spacing: -1.4px; }
+.einleitung p:last-child { margin: 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
+.entdecker { display: grid; grid-template-columns: 340px minmax(0, 1fr); height: clamp(530px, 69vh, 850px); background: white; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px #223c2810; }
+.seitenleiste { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid var(--line); }
+.suche-kopf { padding: 24px 20px 14px; } label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 10px; }
+#suche { width: 100%; padding: 14px 12px; background: #f6f8f5; border: 1px solid var(--line); border-radius: 10px; font-size: 14px; color: var(--ink); }
+.ergebnis-zeile { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; gap: 10px; } .ergebnis-zeile h2 { font-size: 15px; margin: 0; }
+#anzahl { color: var(--green); background: #edf4ec; padding: 5px 8px; font-size: 11px; border-radius: 6px; }
+.tankstellen-liste { position: relative; overflow-y: auto; flex: 1; padding: 0 12px 12px; scrollbar-width: thin; }
+.tankstelle { width: 100%; display: block; text-align: left; background: white; color: var(--ink); padding: 16px 12px; border: 1px solid transparent; border-bottom-color: var(--line); border-radius: 10px; }
+.tankstelle:hover { background: #f5f8f2; } .tankstelle.aktiv { background: #edf5e9; border-color: #a3c29c; }
+.tankstelle-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.nummer { flex-shrink: 0; display: grid; place-items: center; width: 28px; height: 28px; background: #edf3eb; color: var(--green); border-radius: 50%; font-size: 11px; font-weight: bold; }
+.tankstelle-name { font-size: 14px; line-height: 1.4; font-weight: bold; } .adresse { display: block; color: var(--muted); font-size: 12px; line-height: 1.5; margin-bottom: 12px; }
+.preise { display: flex; gap: 8px; } .preis { flex: 1; background: #f3f5f1; border-radius: 7px; padding: 9px; }
+.preis span { display: block; font-size: 10px; color: var(--muted); margin-bottom: 4px; } .preis strong { font-size: 15px; }
+.daten-hinweis { font-size: 10px; line-height: 1.6; color: var(--muted); padding: 12px 20px; margin: 0; border-top: 1px solid var(--line); }
+.karten-bereich { position: relative; min-width: 0; } #karte { height: 100%; width: 100%; background: #e4ebdf; z-index: 0; }
+.karten-werkzeuge { position: absolute; top: 18px; left: 18px; right: 18px; z-index: 500; display: flex; justify-content: space-between; gap: 10px; pointer-events: none; }
+.karten-label, #alle-anzeigen { background: white; border: 1px solid #dce4dc; border-radius: 9px; padding: 11px 13px; box-shadow: 0 3px 12px #1a352315; font-size: 12px; }
+#alle-anzeigen { pointer-events: auto; color: var(--ink); font-weight: bold; } .karten-label { color: var(--green); }
+.karten-tipp { position: absolute; bottom: 25px; left: 18px; z-index: 500; padding: 9px 12px; background: #fffffff0; border-radius: 8px; font-size: 11px; color: var(--muted); pointer-events: none; }
+.karten-status { position: absolute; z-index: 600; top: 70px; left: 18px; right: 18px; padding: 12px; background: #fff4d9; border-radius: 8px; font-size: 13px; line-height: 1.5; }
+.tank-pin { background: none; border: none; } .tank-pin span { display: grid; place-items: center; width: 30px; height: 36px; color: white; background: var(--green); border: 2px solid white; border-radius: 14px 14px 14px 3px; box-shadow: 0 2px 6px #18382a55; font: bold 12px Arial, sans-serif; }
+.tank-pin.ausgewaehlt span { background: #b25722; transform: scale(1.15); }
+.leaflet-popup-content { font-family: Arial, sans-serif; line-height: 1.5; } .leaflet-popup-content h3 { margin: 0 0 6px; font-size: 16px; } .leaflet-popup-content p { margin: 6px 0 12px; color: var(--muted); } .leaflet-popup-content small { display: block; color: var(--muted); margin-top: 10px; }
+.leaflet-control-zoom { border: 1px solid var(--line) !important; border-radius: 8px !important; overflow: hidden; } .leaflet-control-attribution { font-size: 10px; }
+.hinweis { padding: 18px; font-size: 14px; line-height: 1.6; }
+footer { max-width: 1600px; margin: auto; padding: 22px 4vw; display: flex; justify-content: space-between; gap: 15px; font-size: 11px; color: var(--muted); }
+@media (max-width: 900px) { .entdecker { grid-template-columns: 290px minmax(0, 1fr); } .karten-label { display: none; } .karten-werkzeuge { justify-content: flex-end; } }
+@media (max-width: 650px) {
+ header { padding: 14px 5vw; } h1 { font-size: 17px; } .logo { width: 34px; height: 34px; font-size: 19px; } .ort { font-size: 11px; }
+ .einleitung { padding: 26px 0 22px; } .einleitung p:last-child { font-size: 13px; }
+ .entdecker { height: auto; display: flex; flex-direction: column; border-radius: 14px; }
+ .karten-bereich { order: -1; height: 52vh; min-height: 340px; } .seitenleiste { border-right: 0; } .tankstellen-liste { max-height: 450px; flex-basis: auto; }
+ .suche-kopf { padding-top: 20px; } .karten-tipp { font-size: 9px; left: 10px; max-width: calc(100% - 65px); } footer { flex-direction: column; gap: 8px; }
+}
+
+/* Startadresse und Fahrstrecken ergänzen die bestehende Kartenansicht. */
+.routen-bereich { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 22px; margin-bottom: 22px; }
+.routen-bereich h2 { font-size: 18px; margin: 0 0 18px; }
+#routen-form { display: flex; align-items: flex-end; gap: 12px; }
+.adressfeld { flex: 1; }
+#startadresse { width: 100%; padding: 13px; border: 1px solid var(--line); border-radius: 9px; background: #f6f8f5; color: var(--ink); }
+#berechnen { padding: 14px 18px; border: 0; border-radius: 9px; background: var(--green); color: white; font-weight: bold; }
+#routen-hilfe, .routen-quellen { font-size: 11px; color: var(--muted); line-height: 1.6; margin: 12px 0 0; }
+#routen-status { font-size: 13px; line-height: 1.6; margin: 12px 0 0; overflow-wrap: anywhere; }
+#routen-status:empty { display: none; }
+#adress-auswahl { border: 1px solid var(--line); border-radius: 10px; margin: 16px 0 0; padding: 12px; }
+#adress-auswahl legend { font-size: 13px; font-weight: bold; padding: 0 5px; }
+#adress-treffer { display: grid; gap: 8px; }
+.adress-kandidat { text-align: left; border: 1px solid var(--line); padding: 12px; background: #f6f8f5; border-radius: 8px; color: var(--ink); font-size: 13px; line-height: 1.5; }
+.adress-kandidat:hover { background: #edf5e9; }
+.route-info { display: block; margin-top: 12px; color: var(--green); font-size: 13px; font-weight: bold; }
+.route-fehlt { color: var(--muted); font-weight: normal; }
+.start-pin span { display: grid; place-items: center; width: 50px; height: 32px; background: #334b8b; color: white; border: 2px solid white; border-radius: 9px; box-shadow: 0 2px 8px #18382a55; font-weight: bold; }
+@media (max-width: 650px) { #routen-form { flex-direction: column; align-items: stretch; } .routen-bereich { padding: 18px; } }
+
+.kosten-eingaben { display: grid; grid-template-columns: minmax(130px, 1fr) minmax(240px, 3fr); gap: 24px; margin-top: 22px; }
+#kraftstoff, #tankmenge-zahl { padding: 10px; border: 1px solid var(--line); border-radius: 9px; background: #f6f8f5; color: var(--ink); font: inherit; }
+#kraftstoff { width: 100%; }
+.tankmengen-regler { display: flex; align-items: center; gap: 16px; }
+#tankmenge-slider { flex: 1; min-width: 0; accent-color: var(--green); }
+#tankmenge-zahl { width: 80px; }
+#tankmenge-wert { color: var(--green); margin-left: 12px; font-size: 16px; }
+#tankmenge-fehler { font-size: 12px; color: #923715; margin: 5px 0 0; }
+.kosten-modell { color: var(--muted); font-size: 12px; line-height: 1.6; }
+.nur-screenreader { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.station-auswahl { display: block; width: 100%; background: transparent; border: 0; color: inherit; text-align: left; padding: 0; }
+.kosten-literpreis { font-size: 12px; margin: 12px 0; }
+.kosten-beste { background: #deefd9; color: #205730; font-size: 11px; padding: 8px; border-radius: 6px; font-weight: bold; }
+.kosten-zeilen { margin: 10px 0; font-size: 12px; }
+.kosten-zeilen > div { display: flex; justify-content: space-between; gap: 12px; margin: 9px 0; }
+.kosten-zeilen dd { margin: 0; white-space: nowrap; font-weight: bold; }
+.kosten-zeilen .kosten-gesamt { border-top: 1px solid var(--line); padding-top: 12px; font-size: 16px; color: var(--green); }
+.kosten-hinweis { font-size: 11px; color: var(--muted); line-height: 1.5; }
+.kosten-ersparnis { font-size: 12px; font-weight: bold; line-height: 1.5; }
+.kosten-details { font-size: 12px; line-height: 1.6; margin-top: 10px; }
+.kosten-details summary { cursor: pointer; color: var(--green); }
+@media (max-width: 650px) { .kosten-eingaben { grid-template-columns: 1fr; gap: 16px; } }

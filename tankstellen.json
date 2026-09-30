@@ -2,402 +2,1083 @@
   "tankstellen": [
     {
       "id": 1,
-      "name": "OMV Musterstraße",
-      "kette": "OMV",
+      "name": "AVANTI - Wien Brünner Straße 420",
+      "kette": "Avanti",
       "koordinaten": {
-        "latitude": 48.2082,
-        "longitude": 16.3738
+        "latitude": 48.31144,
+        "longitude": 16.43012
       },
       "preise": {
-        "diesel": 1.629,
-        "benzin": 1.589
+        "diesel": 2.259,
+        "benzin": 1.929
       },
       "oeffnungszeiten": {
-        "montag": "06:00-22:00",
-        "dienstag": "06:00-22:00",
-        "mittwoch": "06:00-22:00",
-        "donnerstag": "06:00-22:00",
-        "freitag": "06:00-22:00",
-        "samstag": "07:00-22:00",
-        "sonntag": "07:00-20:00"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 124,
-        "durchschnittsbewertung": 4.3
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": true,
-        "barzahlung": true
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": true,
-      "bemannt": true,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": true,
-        "wc": true,
-        "staubsauger": false,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Brünner Strasse 420",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1354946,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 2,
-      "name": "Shell Hauptstraße",
-      "kette": "Shell",
+      "name": "AVANTI - Wien Julius Ficker Straße 77",
+      "kette": "Avanti",
       "koordinaten": {
-        "latitude": 48.2145,
-        "longitude": 16.3612
+        "latitude": 48.26672,
+        "longitude": 16.44859
       },
       "preise": {
-        "diesel": 1.649,
-        "benzin": 1.599
+        "diesel": 2.194,
+        "benzin": 1.894
       },
       "oeffnungszeiten": {
-        "montag": "05:30-23:00",
-        "dienstag": "05:30-23:00",
-        "mittwoch": "05:30-23:00",
-        "donnerstag": "05:30-23:00",
-        "freitag": "05:30-23:00",
-        "samstag": "06:00-23:00",
-        "sonntag": "06:00-22:00"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 98,
-        "durchschnittsbewertung": 4.1
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": true,
-        "barzahlung": true
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": false,
-      "bemannt": true,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": true,
-        "wc": true,
-        "staubsauger": true,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Julius Ficker Strasse 77",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 38026,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 3,
-      "name": "BP Ringstraße",
-      "kette": "BP",
+      "name": "AVANTI - Wien Prager Straße 270-272",
+      "kette": "Avanti",
       "koordinaten": {
-        "latitude": 48.2019,
-        "longitude": 16.3895
+        "latitude": 48.28664,
+        "longitude": 16.38404
       },
       "preise": {
-        "diesel": 1.619,
-        "benzin": 1.579
+        "diesel": 2.199,
+        "benzin": 1.899
       },
       "oeffnungszeiten": {
-        "montag": "24h",
-        "dienstag": "24h",
-        "mittwoch": "24h",
-        "donnerstag": "24h",
-        "freitag": "24h",
-        "samstag": "24h",
-        "sonntag": "24h"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 210,
-        "durchschnittsbewertung": 4.5
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": false,
-        "barzahlung": true
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": true,
-      "bemannt": true,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": false,
-        "wc": true,
-        "staubsauger": true,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Prager Strasse 270-272",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1354939,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 4,
-      "name": "JET Bahnhofstraße",
-      "kette": "JET",
+      "name": "AVANTI - Wien Wagramer Straße 179",
+      "kette": "Avanti",
       "koordinaten": {
-        "latitude": 48.1933,
-        "longitude": 16.3504
+        "latitude": 48.25964,
+        "longitude": 16.45031
       },
       "preise": {
-        "diesel": 1.589,
-        "benzin": 1.549
+        "diesel": 2.194,
+        "benzin": 1.894
       },
       "oeffnungszeiten": {
-        "montag": "06:00-21:00",
-        "dienstag": "06:00-21:00",
-        "mittwoch": "06:00-21:00",
-        "donnerstag": "06:00-21:00",
-        "freitag": "06:00-22:00",
-        "samstag": "07:00-21:00",
-        "sonntag": "08:00-20:00"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 75,
-        "durchschnittsbewertung": 3.9
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": false,
-        "barzahlung": true
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": true,
-      "bemannt": true,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": false,
-        "wc": false,
-        "staubsauger": true,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Wagramer Strasse 179",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 234,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 5,
-      "name": "Avanti Süd",
-      "kette": "Avanti",
+      "name": "boesch energy, turmöl",
+      "kette": "Turmöl",
       "koordinaten": {
-        "latitude": 48.1811,
-        "longitude": 16.3766
+        "latitude": 48.26578,
+        "longitude": 16.4036
       },
       "preise": {
-        "diesel": 1.569,
-        "benzin": 1.539
+        "diesel": 2.164,
+        "benzin": 1.864
       },
       "oeffnungszeiten": {
-        "montag": "24h",
-        "dienstag": "24h",
-        "mittwoch": "24h",
-        "donnerstag": "24h",
-        "freitag": "24h",
-        "samstag": "24h",
-        "sonntag": "24h"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 143,
-        "durchschnittsbewertung": 4.0
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": true,
-        "barzahlung": false
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": true,
-      "bemannt": false,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": false,
-        "wc": false,
-        "staubsauger": false,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Brünnerstr. 64",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1475831,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 6,
-      "name": "Turmöl Nord",
-      "kette": "Turmöl",
+      "name": "BP Einzingergasse",
+      "kette": "BP",
       "koordinaten": {
-        "latitude": 48.2357,
-        "longitude": 16.3821
+        "latitude": 48.28254695,
+        "longitude": 16.3799518
       },
       "preise": {
-        "diesel": 1.599,
-        "benzin": 1.559
+        "diesel": 2.249,
+        "benzin": 1.929
       },
       "oeffnungszeiten": {
-        "montag": "06:00-22:00",
-        "dienstag": "06:00-22:00",
-        "mittwoch": "06:00-22:00",
-        "donnerstag": "06:00-22:00",
-        "freitag": "06:00-23:00",
-        "samstag": "07:00-23:00",
-        "sonntag": "07:00-21:00"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 167,
-        "durchschnittsbewertung": 4.4
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": true,
-        "barzahlung": true
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": true,
-      "bemannt": true,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": true,
-        "wc": true,
-        "staubsauger": true,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Einzingergasse 2",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 35580,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 7,
-      "name": "Eni West",
-      "kette": "Eni",
+      "name": "BP Brünnerstraße 57a",
+      "kette": "BP",
       "koordinaten": {
-        "latitude": 48.2054,
-        "longitude": 16.3268
+        "latitude": 48.2656576,
+        "longitude": 16.4019786
       },
       "preise": {
-        "diesel": 1.639,
-        "benzin": 1.609
+        "diesel": 2.299,
+        "benzin": 1.969
       },
       "oeffnungszeiten": {
-        "montag": "06:00-22:30",
-        "dienstag": "06:00-22:30",
-        "mittwoch": "06:00-22:30",
-        "donnerstag": "06:00-22:30",
-        "freitag": "06:00-23:00",
-        "samstag": "07:00-23:00",
-        "sonntag": "07:00-22:00"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 64,
-        "durchschnittsbewertung": 3.8
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": false,
-        "barzahlung": true
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": false,
-      "bemannt": true,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": true,
-        "wc": true,
-        "staubsauger": false,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Bruennerstrasse 57a",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 35716,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 8,
-      "name": "SOCAR Zentrum",
-      "kette": "SOCAR",
+      "name": "BP Brünnerstraße 186",
+      "kette": "BP",
       "koordinaten": {
-        "latitude": 48.2178,
-        "longitude": 16.4027
+        "latitude": 48.2835514,
+        "longitude": 16.4130911
       },
       "preise": {
-        "diesel": 1.609,
-        "benzin": 1.569
+        "diesel": 2.259,
+        "benzin": 1.999
       },
       "oeffnungszeiten": {
-        "montag": "07:00-22:00",
-        "dienstag": "07:00-22:00",
-        "mittwoch": "07:00-22:00",
-        "donnerstag": "07:00-22:00",
-        "freitag": "07:00-22:00",
-        "samstag": "07:00-21:00",
-        "sonntag": "08:00-20:00"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 81,
-        "durchschnittsbewertung": 4.2
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": true,
-        "barzahlung": true
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": true,
-      "bemannt": true,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": false,
-        "wc": true,
-        "staubsauger": true,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Bruennerstrasse 186",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 35628,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 9,
-      "name": "Diskont Tank Ost",
-      "kette": "Diskont",
+      "name": "BP Tankstelle Siemensstraße",
+      "kette": "BP",
       "koordinaten": {
-        "latitude": 48.1986,
-        "longitude": 16.4215
+        "latitude": 48.266989,
+        "longitude": 16.428849
       },
       "preise": {
-        "diesel": 1.549,
-        "benzin": 1.519
+        "diesel": 2.219,
+        "benzin": 1.919
       },
       "oeffnungszeiten": {
-        "montag": "24h",
-        "dienstag": "24h",
-        "mittwoch": "24h",
-        "donnerstag": "24h",
-        "freitag": "24h",
-        "samstag": "24h",
-        "sonntag": "24h"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 55,
-        "durchschnittsbewertung": 3.7
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": false,
-        "barzahlung": false
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": true,
-      "bemannt": false,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": false,
-        "wc": false,
-        "staubsauger": false,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Siemensstraße 105b",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 33348,
+        "abgerufenAm": "2026-09-30"
       }
     },
     {
       "id": 10,
-      "name": "OMV City",
-      "kette": "OMV",
+      "name": "Diskont Tankstelle Shuttleworthstraße",
+      "kette": "Diskont",
       "koordinaten": {
-        "latitude": 48.2251,
-        "longitude": 16.3459
+        "latitude": 48.27123,
+        "longitude": 16.40904
       },
       "preise": {
-        "diesel": 1.659,
-        "benzin": 1.619
+        "diesel": 2.274,
+        "benzin": 1.969
       },
       "oeffnungszeiten": {
-        "montag": "05:00-23:30",
-        "dienstag": "05:00-23:30",
-        "mittwoch": "05:00-23:30",
-        "donnerstag": "05:00-23:30",
-        "freitag": "05:00-24:00",
-        "samstag": "06:00-24:00",
-        "sonntag": "06:00-23:00"
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
       },
       "bewertung": {
-        "anzahlBewertungen": 302,
-        "durchschnittsbewertung": 4.6
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
       },
       "zahlungsmittel": {
-        "debit": true,
-        "kreditkarte": true,
-        "applePay": true,
-        "barzahlung": true
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
       },
-      "tankautomat": true,
-      "bemannt": true,
+      "tankautomat": null,
+      "bemannt": null,
       "ausstattung": {
-        "waschbox": true,
-        "wc": true,
-        "staubsauger": true,
-        "luftpumpe": true
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Shuttleworthstrasse 11 (am HOFER Parkplatz)",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1474309,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Diskont Tankstelle Donaufelderstraße",
+      "kette": "Diskont",
+      "koordinaten": {
+        "latitude": 48.25258,
+        "longitude": 16.42698
+      },
+      "preise": {
+        "diesel": 2.194,
+        "benzin": 1.889
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Donaufelderstrasse 137 (am HOFER Parkplatz)",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1474472,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 12,
+      "name": "ENI Leopoldauerstraße",
+      "kette": "ENI",
+      "koordinaten": {
+        "latitude": 48.2624,
+        "longitude": 16.4359
+      },
+      "preise": {
+        "diesel": 2.219,
+        "benzin": 1.919
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Leopoldauerstrasse 180",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1474284,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 13,
+      "name": "JET Tankstelle Donaufelder Straße",
+      "kette": "JET",
+      "koordinaten": {
+        "latitude": 48.252498,
+        "longitude": 16.426062
+      },
+      "preise": {
+        "diesel": 2.198,
+        "benzin": 1.897
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "DONAUFELDER STRASSE 135",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1354750,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 14,
+      "name": "JET Tankstelle Leopoldauerstraße",
+      "kette": "JET",
+      "koordinaten": {
+        "latitude": 48.25895,
+        "longitude": 16.41139
+      },
+      "preise": {
+        "diesel": 2.198,
+        "benzin": 1.897
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "LEOPOLDAUERSTRASSE 40",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1354930,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 15,
+      "name": "JET Tankstelle Pragerstraße",
+      "kette": "JET",
+      "koordinaten": {
+        "latitude": 48.278186,
+        "longitude": 16.388013
+      },
+      "preise": {
+        "diesel": 2.204,
+        "benzin": 1.904
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "PRAGERSTRASSE 138",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1469406,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Lohberger",
+      "kette": "Lohberger",
+      "koordinaten": {
+        "latitude": 48.270922,
+        "longitude": 16.430977
+      },
+      "preise": {
+        "diesel": 2.259,
+        "benzin": 1.899
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Richard Neutra Gasse 9B",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1475672,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 17,
+      "name": "OMV - Wien Brünner Straße 172",
+      "kette": "OMV",
+      "koordinaten": {
+        "latitude": 48.28114,
+        "longitude": 16.41181
+      },
+      "preise": {
+        "diesel": 2.359,
+        "benzin": 1.939
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Brünner Strasse 172",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1354918,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 18,
+      "name": "OMV - Wien Prager Straße 32",
+      "kette": "OMV",
+      "koordinaten": {
+        "latitude": 48.26513,
+        "longitude": 16.39386
+      },
+      "preise": {
+        "diesel": 2.249,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Prager Strasse 32-34",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1354905,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 19,
+      "name": "OMV - Wien Shuttleworthstraße 10",
+      "kette": "OMV",
+      "koordinaten": {
+        "latitude": 48.2705,
+        "longitude": 16.41214
+      },
+      "preise": {
+        "diesel": 2.259,
+        "benzin": 1.949
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Shuttleworthstrasse 10",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1354889,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Shell Austria Floridsdorfer Hauptstraße",
+      "kette": "Shell",
+      "koordinaten": {
+        "latitude": 48.25439,
+        "longitude": 16.39411
+      },
+      "preise": {
+        "diesel": 2.249,
+        "benzin": 1.927
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "FLORIDSDORFER HAUPTSTR 17",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 449481,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Shell Austria Leopoldauerstraße",
+      "kette": "Shell",
+      "koordinaten": {
+        "latitude": 48.25993,
+        "longitude": 16.41174
+      },
+      "preise": {
+        "diesel": 2.219,
+        "benzin": 1.897
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "LEOPOLDAUERSTRASSE 51",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 449653,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Shell Austria Wagramer Straße",
+      "kette": "Shell",
+      "koordinaten": {
+        "latitude": 48.26443,
+        "longitude": 16.45486
+      },
+      "preise": {
+        "diesel": 2.299,
+        "benzin": 1.969
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "WAGRAMER STRASSE 203",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 450002,
+        "abgerufenAm": "2026-09-30"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Turmöl Pragerstraße",
+      "kette": "Turmöl",
+      "koordinaten": {
+        "latitude": 48.276582,
+        "longitude": 16.388104
+      },
+      "preise": {
+        "diesel": 2.204,
+        "benzin": 1.904
+      },
+      "oeffnungszeiten": {
+        "montag": null,
+        "dienstag": null,
+        "mittwoch": null,
+        "donnerstag": null,
+        "freitag": null,
+        "samstag": null,
+        "sonntag": null
+      },
+      "bewertung": {
+        "anzahlBewertungen": null,
+        "durchschnittsbewertung": null
+      },
+      "zahlungsmittel": {
+        "debit": null,
+        "kreditkarte": null,
+        "applePay": null,
+        "barzahlung": null
+      },
+      "tankautomat": null,
+      "bemannt": null,
+      "ausstattung": {
+        "waschbox": null,
+        "wc": null,
+        "staubsauger": null,
+        "luftpumpe": null
+      },
+      "adresse": "Pragerstraße 155",
+      "standortQuelle": {
+        "name": "E-Control Spritpreisrechner",
+        "url": "https://www.spritpreisrechner.at/",
+        "id": 1473491,
+        "abgerufenAm": "2026-09-30"
       }
     }
   ]
