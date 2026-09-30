@@ -6,7 +6,13 @@
 
     <title>Tankstellen Finder</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet (Kartenbibliothek) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Leaflet-Erweiterung: fasst nahe Pinnadeln zu Gruppen zusammen -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -26,9 +32,14 @@
             <input
                 type="text"
                 id="suche"
-                placeholder="Tankstelle suchen..."
+                placeholder="Name, Kette oder Adresse..."
             >
         </div>
+
+        <p id="stand" class="stand"></p>
+
+        <!-- Karte von Wien mit allen Tankstellen -->
+        <div id="karte"></div>
 
         <!-- Hier werden die Tankstellen mit JavaScript eingefügt -->
         <div id="tankstellen-liste" class="tankstellen-liste"></div>
@@ -39,6 +50,8 @@
         <p>Tankstellen App – Schulprojekt</p>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script src="script.js"></script>
 
 </body>
