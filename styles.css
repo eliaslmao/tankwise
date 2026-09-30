@@ -229,3 +229,104 @@ footer {
   }
 
 }
+
+/* KARTE */
+
+#karte {
+  height: 450px;
+
+  margin-bottom: 25px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  z-index: 0;
+}
+
+
+/* PINNADELN */
+
+.pin-schild {
+  position: relative;
+
+  width: 90px;
+
+  background-color: #1f2937;
+  color: white;
+
+  padding: 5px 6px;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+  text-align: center;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.pin-schild span {
+  display: block;
+}
+
+/* Spitze der Pinnadel */
+.pin-schild::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+
+  transform: translateX(-50%);
+
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #1f2937;
+}
+
+.pin:hover .pin-schild {
+  background-color: #16a34a;
+}
+
+.pin:hover .pin-schild::after {
+  border-top-color: #16a34a;
+}
+
+
+/* DATENSTAND */
+
+.stand {
+  margin: -12px 0 15px;
+
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+
+/* GRUPPEN VON PINNADELN */
+
+.pin-gruppe div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 96px;
+  transform: translate(-50%, -50%);
+
+  background-color: #2563eb;
+  color: white;
+
+  padding: 5px 6px;
+
+  border: 3px solid white;
+  border-radius: 12px;
+
+  font-size: 11px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.pin-gruppe strong {
+  font-size: 15px;
+}

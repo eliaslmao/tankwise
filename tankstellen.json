@@ -1,16 +1,626 @@
 {
+  "quelle": "E-Control Spritpreisrechner (spritpreisrechner.at)",
+  "stand": "30.09.2026 20:57",
   "tankstellen": [
     {
-      "id": 1,
-      "name": "OMV Musterstraße",
-      "kette": "OMV",
+      "id": 1354946,
+      "name": "AVANTI - Wien Brünner Straße 420",
+      "kette": "Avanti",
+      "adresse": "Brünner Strasse 420, 1210 Wien",
       "koordinaten": {
-        "latitude": 48.2082,
-        "longitude": 16.3738
+        "latitude": 48.31144,
+        "longitude": 16.43012
       },
       "preise": {
-        "diesel": 1.629,
-        "benzin": 1.589
+        "diesel": 2.259,
+        "benzin": 1.959
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354941,
+      "name": "AVANTI - Wien Edelsinnstraße 16",
+      "kette": "Avanti",
+      "adresse": "Edelsinnstrasse 66, 1120 Wien",
+      "koordinaten": {
+        "latitude": 48.1724,
+        "longitude": 16.31949
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.929
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354951,
+      "name": "AVANTI - Wien Esslinger Hauptstraße 32",
+      "kette": "Avanti",
+      "adresse": "Esslinger Hauptstrasse 32, 1220 Wien",
+      "koordinaten": {
+        "latitude": 48.2145,
+        "longitude": 16.51461
+      },
+      "preise": {
+        "diesel": 2.274,
+        "benzin": 1.974
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354901,
+      "name": "AVANTI - Wien Gaussplatz 1",
+      "kette": "Avanti",
+      "adresse": "Gaussplatz 1, 1020 Wien",
+      "koordinaten": {
+        "latitude": 48.22588,
+        "longitude": 16.3708
+      },
+      "preise": {
+        "diesel": 2.294,
+        "benzin": 1.979
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354953,
+      "name": "AVANTI - Wien Guldengasse 13",
+      "kette": "Avanti",
+      "adresse": "Guldengasse 13, 1140 Wien",
+      "koordinaten": {
+        "latitude": 48.1953,
+        "longitude": 16.28135
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.929
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354955,
+      "name": "AVANTI - Wien Heiligenstädter Straße 196",
+      "kette": "Avanti",
+      "adresse": "Heiligenstädter Strasse 196, 1190 Wien",
+      "koordinaten": {
+        "latitude": 48.28511,
+        "longitude": 16.34549
+      },
+      "preise": {
+        "diesel": 2.299,
+        "benzin": 1.979
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1469546,
+      "name": "AVANTI - Wien Jedletzbergerstraße 7",
+      "kette": "Avanti",
+      "adresse": "Jedletzbergerstrasse 7, 1110 Wien",
+      "koordinaten": {
+        "latitude": 48.17054,
+        "longitude": 16.45797
+      },
+      "preise": {
+        "diesel": 2.264,
+        "benzin": 1.944
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 38026,
+      "name": "AVANTI - Wien Julius Ficker Straße 77",
+      "kette": "Avanti",
+      "adresse": "Julius Ficker Strasse 77, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.26672,
+        "longitude": 16.44859
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.929
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354939,
+      "name": "AVANTI - Wien Prager Straße 270-272",
+      "kette": "Avanti",
+      "adresse": "Prager Strasse 270-272, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.28664,
+        "longitude": 16.38404
+      },
+      "preise": {
+        "diesel": 2.258,
+        "benzin": 1.948
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354935,
+      "name": "AVANTI - Wien Simmeringer Hauptstraße 489",
+      "kette": "Avanti",
+      "adresse": "Simmeringer Hauptstrasse 489, 1110 Wien",
+      "koordinaten": {
+        "latitude": 48.14844,
+        "longitude": 16.46228
+      },
+      "preise": {
+        "diesel": 2.264,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 36271,
+      "name": "AVANTI - Wien Simmeringer Hauptstraße 5",
+      "kette": "Avanti",
+      "adresse": "Simmeringer Hauptstrasse 5, 1110 Wien",
+      "koordinaten": {
+        "latitude": 48.18388,
+        "longitude": 16.4059
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.944
+      },
+      "oeffnungszeiten": {
+        "montag": "07:00-21:00",
+        "dienstag": "07:00-21:00",
+        "mittwoch": "07:00-21:00",
+        "donnerstag": "07:00-21:00",
+        "freitag": "07:00-21:00",
+        "samstag": "07:00-21:00",
+        "sonntag": "07:00-21:00",
+        "feiertag": "07:00-21:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 234,
+      "name": "AVANTI - Wien Wagramer Straße 179",
+      "kette": "Avanti",
+      "adresse": "Wagramer Strasse 179, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.25964,
+        "longitude": 16.45031
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.929
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-23:00",
+        "dienstag": "06:00-23:00",
+        "mittwoch": "06:00-23:00",
+        "donnerstag": "06:00-23:00",
+        "freitag": "06:00-23:00",
+        "samstag": "06:00-23:00",
+        "sonntag": "06:00-23:00",
+        "feiertag": "06:00-23:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1131667,
+      "name": "AWI-Diskont Bedienungstankstelle",
+      "kette": "Diskont",
+      "adresse": "Sternwartestraße 23, 1180 Wien",
+      "koordinaten": {
+        "latitude": 48.2295664,
+        "longitude": 16.3462611
+      },
+      "preise": {
+        "diesel": 2.249,
+        "benzin": 1.939
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-21:00",
+        "dienstag": "06:00-21:00",
+        "mittwoch": "06:00-21:00",
+        "donnerstag": "06:00-21:00",
+        "freitag": "06:00-21:00",
+        "samstag": "06:00-21:00",
+        "sonntag": "07:00-21:00",
+        "feiertag": "07:00-21:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35697,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Hietzinger Kai 133-135 , 1130 Wien",
+      "koordinaten": {
+        "latitude": 48.1915759,
+        "longitude": 16.2803217
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.909
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": true,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35579,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Hadikgasse/Kefergasse , 1140 Wien",
+      "koordinaten": {
+        "latitude": 48.1927168,
+        "longitude": 16.2776905
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.919
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": true,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35726,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Am Fasangarten 9 , 1120 Wien",
+      "koordinaten": {
+        "latitude": 48.170747,
+        "longitude": 16.305561
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.949
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-22:00",
+        "dienstag": "05:00-22:00",
+        "mittwoch": "05:00-22:00",
+        "donnerstag": "05:00-22:00",
+        "freitag": "05:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35631,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Linke Wienzeile 90-92 , 1060 Wien",
+      "koordinaten": {
+        "latitude": 48.1947585,
+        "longitude": 16.3537622
+      },
+      "preise": {
+        "diesel": 2.289,
+        "benzin": 1.989
       },
       "oeffnungszeiten": {
         "montag": "06:00-22:00",
@@ -19,78 +629,109 @@
         "donnerstag": "06:00-22:00",
         "freitag": "06:00-22:00",
         "samstag": "07:00-22:00",
-        "sonntag": "07:00-20:00"
+        "sonntag": "08:00-22:00"
       },
-      "bewertung": {
-        "anzahlBewertungen": 124,
-        "durchschnittsbewertung": 4.3
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": true,
         "barzahlung": true
       },
-      "tankautomat": true,
+      "tankautomat": false,
       "bemannt": true,
       "ausstattung": {
-        "waschbox": true,
-        "wc": true,
+        "waschbox": false,
+        "wc": false,
         "staubsauger": false,
-        "luftpumpe": true
+        "luftpumpe": false
       }
     },
     {
-      "id": 2,
-      "name": "Shell Hauptstraße",
-      "kette": "Shell",
+      "id": 35769,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Erzherzog Karlstr. 253 , 1220 Wien",
       "koordinaten": {
-        "latitude": 48.2145,
-        "longitude": 16.3612
+        "latitude": 48.2204444,
+        "longitude": 16.48015387
       },
       "preise": {
-        "diesel": 1.649,
-        "benzin": 1.599
+        "diesel": 2.299,
+        "benzin": 1.989
       },
       "oeffnungszeiten": {
-        "montag": "05:30-23:00",
-        "dienstag": "05:30-23:00",
-        "mittwoch": "05:30-23:00",
-        "donnerstag": "05:30-23:00",
-        "freitag": "05:30-23:00",
-        "samstag": "06:00-23:00",
-        "sonntag": "06:00-22:00"
+        "montag": "06:00-24:00",
+        "dienstag": "06:00-24:00",
+        "mittwoch": "06:00-24:00",
+        "donnerstag": "06:00-24:00",
+        "freitag": "06:00-24:00",
+        "samstag": "06:00-24:00",
+        "sonntag": "06:00-24:00"
       },
-      "bewertung": {
-        "anzahlBewertungen": 98,
-        "durchschnittsbewertung": 4.1
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": true,
         "barzahlung": true
       },
       "tankautomat": false,
       "bemannt": true,
       "ausstattung": {
         "waschbox": true,
-        "wc": true,
+        "wc": false,
         "staubsauger": true,
-        "luftpumpe": true
+        "luftpumpe": false
       }
     },
     {
-      "id": 3,
-      "name": "BP Ringstraße",
+      "id": 35743,
+      "name": "BP",
       "kette": "BP",
+      "adresse": "Hernalser Hauptstr.32-34 , 1170 Wien",
       "koordinaten": {
-        "latitude": 48.2019,
-        "longitude": 16.3895
+        "latitude": 48.2173667,
+        "longitude": 16.3382721
       },
       "preise": {
-        "diesel": 1.619,
-        "benzin": 1.579
+        "diesel": 2.289,
+        "benzin": 1.959
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-24:00",
+        "dienstag": "06:00-24:00",
+        "mittwoch": "06:00-24:00",
+        "donnerstag": "06:00-24:00",
+        "freitag": "06:00-24:00",
+        "samstag": "06:00-24:00",
+        "sonntag": "06:00-24:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35750,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Handelskai 276-280 , 1020 Wien",
+      "koordinaten": {
+        "latitude": 48.2165742,
+        "longitude": 16.4171484
+      },
+      "preise": {
+        "diesel": 2.229,
+        "benzin": null
       },
       "oeffnungszeiten": {
         "montag": "24h",
@@ -99,78 +740,111 @@
         "donnerstag": "24h",
         "freitag": "24h",
         "samstag": "24h",
-        "sonntag": "24h"
+        "sonntag": "24h",
+        "feiertag": "24h"
       },
-      "bewertung": {
-        "anzahlBewertungen": 210,
-        "durchschnittsbewertung": 4.5
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": false,
         "barzahlung": true
       },
-      "tankautomat": true,
+      "tankautomat": false,
       "bemannt": true,
       "ausstattung": {
         "waschbox": false,
-        "wc": true,
-        "staubsauger": true,
-        "luftpumpe": true
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
       }
     },
     {
-      "id": 4,
-      "name": "JET Bahnhofstraße",
-      "kette": "JET",
+      "id": 35754,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Krottenbachstr. 17 , 1190 Wien",
       "koordinaten": {
-        "latitude": 48.1933,
-        "longitude": 16.3504
+        "latitude": 48.2403021,
+        "longitude": 16.3418194
       },
       "preise": {
-        "diesel": 1.589,
-        "benzin": 1.549
+        "diesel": 2.319,
+        "benzin": 1.989
       },
       "oeffnungszeiten": {
-        "montag": "06:00-21:00",
-        "dienstag": "06:00-21:00",
-        "mittwoch": "06:00-21:00",
-        "donnerstag": "06:00-21:00",
-        "freitag": "06:00-22:00",
-        "samstag": "07:00-21:00",
-        "sonntag": "08:00-20:00"
+        "montag": "06:00-24:00",
+        "dienstag": "06:00-24:00",
+        "mittwoch": "06:00-24:00",
+        "donnerstag": "06:00-24:00",
+        "freitag": "06:00-24:00",
+        "samstag": "06:00-24:00",
+        "sonntag": "06:00-24:00"
       },
-      "bewertung": {
-        "anzahlBewertungen": 75,
-        "durchschnittsbewertung": 3.9
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": false,
         "barzahlung": true
       },
-      "tankautomat": true,
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35714,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Heiligenstaedterstr.77 , 1190 Wien",
+      "koordinaten": {
+        "latitude": 48.2438482,
+        "longitude": 16.3613545
+      },
+      "preise": {
+        "diesel": 2.319,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
       "bemannt": true,
       "ausstattung": {
         "waschbox": false,
         "wc": false,
         "staubsauger": true,
-        "luftpumpe": true
+        "luftpumpe": false
       }
     },
     {
-      "id": 5,
-      "name": "Avanti Süd",
-      "kette": "Avanti",
+      "id": 35721,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Dresdnerstrasse 8 , 1200 Wien",
       "koordinaten": {
-        "latitude": 48.1811,
-        "longitude": 16.3766
+        "latitude": 48.2408605,
+        "longitude": 16.3748223
       },
       "preise": {
-        "diesel": 1.569,
-        "benzin": 1.539
+        "diesel": 2.319,
+        "benzin": null
       },
       "oeffnungszeiten": {
         "montag": "24h",
@@ -179,16 +853,241 @@
         "donnerstag": "24h",
         "freitag": "24h",
         "samstag": "24h",
-        "sonntag": "24h"
+        "sonntag": "24h",
+        "feiertag": "24h"
       },
-      "bewertung": {
-        "anzahlBewertungen": 143,
-        "durchschnittsbewertung": 4.0
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": true,
+        "staubsauger": true,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35716,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Bruennerstrasse 57a , 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.2656576,
+        "longitude": 16.4019786
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.929
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35628,
+      "name": "BP",
+      "kette": "BP",
+      "adresse": "Bruennerstrasse 186 , 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.2835514,
+        "longitude": 16.4130911
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.949
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 33348,
+      "name": "BP Tankstelle",
+      "kette": "BP",
+      "adresse": "Siemensstraße 105b, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.266989,
+        "longitude": 16.428849
+      },
+      "preise": {
+        "diesel": 2.228,
+        "benzin": 1.928
+      },
+      "oeffnungszeiten": {
+        "montag": "05:30-22:00",
+        "dienstag": "05:30-22:00",
+        "mittwoch": "05:30-22:00",
+        "donnerstag": "05:30-22:00",
+        "freitag": "05:30-22:00",
+        "samstag": "07:00-22:00",
+        "sonntag": "07:00-22:00",
+        "feiertag": "07:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": true,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 34016,
+      "name": "Baertl GmbH",
+      "kette": "Sonstige",
+      "adresse": "Stuwerstrasse 41, 1020 Wien",
+      "koordinaten": {
+        "latitude": 48.219051079508,
+        "longitude": 16.4058665626915
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.988
+      },
+      "oeffnungszeiten": {
+        "montag": "07:00-19:00",
+        "dienstag": "07:00-19:00",
+        "mittwoch": "07:00-19:00",
+        "donnerstag": "07:00-19:00",
+        "freitag": "07:00-16:00",
+        "samstag": "geschlossen",
+        "sonntag": "geschlossen",
+        "feiertag": "geschlossen"
+      },
+      "geoeffnet": false,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 41587,
+      "name": "DISK Gutmann",
+      "kette": "Sonstige",
+      "adresse": "Franzensbrückenstraße 15, 1020 Wien,Leopoldstadt",
+      "koordinaten": {
+        "latitude": 48.21461,
+        "longitude": 16.39166
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.984
+      },
+      "oeffnungszeiten": {
+        "montag": "07:00-19:00",
+        "dienstag": "07:00-19:00",
+        "mittwoch": "07:00-19:00",
+        "donnerstag": "07:00-19:00",
+        "freitag": "07:00-19:00",
+        "samstag": "07:00-19:00",
+        "sonntag": "07:00-19:00",
+        "feiertag": "07:00-19:00"
+      },
+      "geoeffnet": false,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1132041,
+      "name": "DISKONT",
+      "kette": "Diskont",
+      "adresse": "Simmeringer Hauptstraße 334-336, 1110 Wien,Simmering",
+      "koordinaten": {
+        "latitude": 48.147423,
+        "longitude": 16.461307
+      },
+      "preise": {
+        "diesel": 2.264,
+        "benzin": 1.938
+      },
+      "oeffnungszeiten": {
+        "montag": "00:00-23:59",
+        "dienstag": "00:00-23:59",
+        "mittwoch": "00:00-23:59",
+        "donnerstag": "00:00-23:59",
+        "freitag": "00:00-23:59",
+        "samstag": "00:00-23:59",
+        "sonntag": "00:00-23:59",
+        "feiertag": "00:00-23:59"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
         "barzahlung": false
       },
       "tankautomat": true,
@@ -197,140 +1096,591 @@
         "waschbox": false,
         "wc": false,
         "staubsauger": false,
-        "luftpumpe": true
+        "luftpumpe": false
       }
     },
     {
-      "id": 6,
-      "name": "Turmöl Nord",
-      "kette": "Turmöl",
+      "id": 1468806,
+      "name": "DISKONT TANKSTELLE WIEN 22",
+      "kette": "Diskont",
+      "adresse": "Erzherzog-Karl-Straße 12, 1220 Wien",
       "koordinaten": {
-        "latitude": 48.2357,
-        "longitude": 16.3821
+        "latitude": 48.238192,
+        "longitude": 16.432431
       },
       "preise": {
-        "diesel": 1.599,
-        "benzin": 1.559
+        "diesel": 2.189,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "07:00-19:00",
+        "dienstag": "07:00-19:00",
+        "mittwoch": "07:00-19:00",
+        "donnerstag": "07:00-19:00",
+        "freitag": "07:00-19:00",
+        "samstag": "08:00-18:00",
+        "sonntag": "geschlossen",
+        "feiertag": "geschlossen"
+      },
+      "geoeffnet": false,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1473128,
+      "name": "Diskont Tankstelle",
+      "kette": "Diskont",
+      "adresse": "Breitenfurter Strasse 261 (am HOFER Parkplatz), 1230 Wien",
+      "koordinaten": {
+        "latitude": 48.1511,
+        "longitude": 16.3007
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.944
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474472,
+      "name": "Diskont Tankstelle",
+      "kette": "Diskont",
+      "adresse": "Donaufelderstrasse 137 (am HOFER Parkplatz), 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.25258,
+        "longitude": 16.42698
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.929
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": false
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 7685,
+      "name": "Diskonttankstelle Jandl",
+      "kette": "Diskont",
+      "adresse": "Dassanowskyweg 12, 1220 Wien",
+      "koordinaten": {
+        "latitude": 48.2660299,
+        "longitude": 16.4620288
+      },
+      "preise": {
+        "diesel": 2.168,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-18:00",
+        "dienstag": "06:00-18:00",
+        "mittwoch": "06:00-18:00",
+        "donnerstag": "06:00-18:00",
+        "freitag": "06:00-18:00",
+        "samstag": "07:00-13:00",
+        "sonntag": "geschlossen",
+        "feiertag": "geschlossen"
+      },
+      "geoeffnet": false,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": true,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1310359,
+      "name": "GENOL - Lagerhaus",
+      "kette": "Genol",
+      "adresse": "Alberner Hafenzufahrtsstraße 17, 1110 Wien",
+      "koordinaten": {
+        "latitude": 48.17277,
+        "longitude": 16.47269
+      },
+      "preise": {
+        "diesel": 2.269,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": false
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354794,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "KETZERGASSE 208, 1230 WIEN",
+      "koordinaten": {
+        "latitude": 48.130709,
+        "longitude": 16.289516
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.938
+      },
+      "oeffnungszeiten": {
+        "montag": "05:30-23:30",
+        "dienstag": "05:30-23:30",
+        "mittwoch": "05:30-23:30",
+        "donnerstag": "05:30-23:30",
+        "freitag": "05:30-23:30",
+        "samstag": "05:30-23:30",
+        "sonntag": "05:30-23:30",
+        "feiertag": "05:30-23:30"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354670,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "TRIESTERSTRASSE 292, 1230 WIEN",
+      "koordinaten": {
+        "latitude": 48.131138,
+        "longitude": 16.321654
+      },
+      "preise": {
+        "diesel": 2.237,
+        "benzin": 1.945
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-23:00",
+        "dienstag": "06:00-23:00",
+        "mittwoch": "06:00-23:00",
+        "donnerstag": "06:00-23:00",
+        "freitag": "06:00-23:00",
+        "samstag": "06:00-23:00",
+        "sonntag": "06:00-23:00",
+        "feiertag": "06:00-23:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354892,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "LAXENBURGER STRASSE 248, 1230 WIEN",
+      "koordinaten": {
+        "latitude": 48.135681,
+        "longitude": 16.356244
+      },
+      "preise": {
+        "diesel": 2.279,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354672,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "OBERLAAERSTR. 276, 1230 WIEN",
+      "koordinaten": {
+        "latitude": 48.146913,
+        "longitude": 16.366831
+      },
+      "preise": {
+        "diesel": 2.279,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-23:00",
+        "dienstag": "05:00-23:00",
+        "mittwoch": "05:00-23:00",
+        "donnerstag": "05:00-23:00",
+        "freitag": "05:00-23:00",
+        "samstag": "06:00-23:00",
+        "sonntag": "06:00-23:00",
+        "feiertag": "06:00-23:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354769,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "SIMMERINGER HAUPTSTRASSE 336, 1110 WIEN",
+      "koordinaten": {
+        "latitude": 48.147379,
+        "longitude": 16.463011
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.939
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-23:00",
+        "dienstag": "06:00-23:00",
+        "mittwoch": "06:00-23:00",
+        "donnerstag": "06:00-23:00",
+        "freitag": "06:00-23:00",
+        "samstag": "06:00-23:00",
+        "sonntag": "06:00-23:00",
+        "feiertag": "06:00-23:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354721,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "LINZER STRASSE 453, 1140 WIEN",
+      "koordinaten": {
+        "latitude": 48.203103,
+        "longitude": 16.244262
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.939
       },
       "oeffnungszeiten": {
         "montag": "06:00-22:00",
         "dienstag": "06:00-22:00",
         "mittwoch": "06:00-22:00",
         "donnerstag": "06:00-22:00",
-        "freitag": "06:00-23:00",
-        "samstag": "07:00-23:00",
-        "sonntag": "07:00-21:00"
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
       },
-      "bewertung": {
-        "anzahlBewertungen": 167,
-        "durchschnittsbewertung": 4.4
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": true,
         "barzahlung": true
       },
-      "tankautomat": true,
+      "tankautomat": false,
       "bemannt": true,
       "ausstattung": {
-        "waschbox": true,
-        "wc": true,
-        "staubsauger": true,
-        "luftpumpe": true
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
       }
     },
     {
-      "id": 7,
-      "name": "Eni West",
-      "kette": "Eni",
+      "id": 1354849,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "BREITENFURTERSTRASSE 164, 1230 WIEN",
       "koordinaten": {
-        "latitude": 48.2054,
-        "longitude": 16.3268
+        "latitude": 48.153886,
+        "longitude": 16.301339
       },
       "preise": {
-        "diesel": 1.639,
-        "benzin": 1.609
+        "diesel": 2.238,
+        "benzin": 1.946
       },
       "oeffnungszeiten": {
-        "montag": "06:00-22:30",
-        "dienstag": "06:00-22:30",
-        "mittwoch": "06:00-22:30",
-        "donnerstag": "06:00-22:30",
+        "montag": "06:00-23:00",
+        "dienstag": "06:00-23:00",
+        "mittwoch": "06:00-23:00",
+        "donnerstag": "06:00-23:00",
         "freitag": "06:00-23:00",
-        "samstag": "07:00-23:00",
-        "sonntag": "07:00-22:00"
+        "samstag": "06:00-23:00",
+        "sonntag": "06:00-23:00",
+        "feiertag": "06:00-23:00"
       },
-      "bewertung": {
-        "anzahlBewertungen": 64,
-        "durchschnittsbewertung": 3.8
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354954,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "RAXSTRASSE 5, 1100 WIEN",
+      "koordinaten": {
+        "latitude": 48.165249,
+        "longitude": 16.365198
+      },
+      "preise": {
+        "diesel": 2.195,
+        "benzin": 1.894
+      },
+      "oeffnungszeiten": {
+        "montag": "05:30-23:30",
+        "dienstag": "05:30-23:30",
+        "mittwoch": "05:30-23:30",
+        "donnerstag": "05:30-23:30",
+        "freitag": "05:30-23:30",
+        "samstag": "05:30-23:30",
+        "sonntag": "05:30-23:30",
+        "feiertag": "05:30-23:30"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354667,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "SIMMERINGER HAUPTSTRASSE 275, 1110 WIEN",
+      "koordinaten": {
+        "latitude": 48.159966,
+        "longitude": 16.43266
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.939
+      },
+      "oeffnungszeiten": {
+        "montag": "05:30-23:30",
+        "dienstag": "05:30-23:30",
+        "mittwoch": "05:30-23:30",
+        "donnerstag": "05:30-23:30",
+        "freitag": "05:30-23:30",
+        "samstag": "05:30-23:30",
+        "sonntag": "05:30-23:30",
+        "feiertag": "05:30-23:30"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
         "barzahlung": true
       },
       "tankautomat": false,
       "bemannt": true,
       "ausstattung": {
         "waschbox": true,
-        "wc": true,
+        "wc": false,
         "staubsauger": false,
-        "luftpumpe": true
+        "luftpumpe": false
       }
     },
     {
-      "id": 8,
-      "name": "SOCAR Zentrum",
-      "kette": "SOCAR",
+      "id": 1354942,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "JEDLETZBERGERSTRASSE 18, 1110 WIEN",
       "koordinaten": {
-        "latitude": 48.2178,
-        "longitude": 16.4027
+        "latitude": 48.168847,
+        "longitude": 16.459643
       },
       "preise": {
-        "diesel": 1.609,
-        "benzin": 1.569
+        "diesel": 2.239,
+        "benzin": 1.939
       },
       "oeffnungszeiten": {
-        "montag": "07:00-22:00",
-        "dienstag": "07:00-22:00",
-        "mittwoch": "07:00-22:00",
-        "donnerstag": "07:00-22:00",
-        "freitag": "07:00-22:00",
-        "samstag": "07:00-21:00",
-        "sonntag": "08:00-20:00"
+        "montag": "05:00-23:30",
+        "dienstag": "05:00-23:30",
+        "mittwoch": "05:00-23:30",
+        "donnerstag": "05:00-23:30",
+        "freitag": "05:00-23:30",
+        "samstag": "05:00-23:30",
+        "sonntag": "05:00-23:30",
+        "feiertag": "05:00-23:30"
       },
-      "bewertung": {
-        "anzahlBewertungen": 81,
-        "durchschnittsbewertung": 4.2
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": true,
         "barzahlung": true
       },
-      "tankautomat": true,
+      "tankautomat": false,
       "bemannt": true,
       "ausstattung": {
-        "waschbox": false,
-        "wc": true,
-        "staubsauger": true,
-        "luftpumpe": true
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
       }
     },
     {
-      "id": 9,
-      "name": "Diskont Tank Ost",
-      "kette": "Diskont",
+      "id": 1354779,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "HIETZINGER KAI 99, 1130 WIEN",
       "koordinaten": {
-        "latitude": 48.1986,
-        "longitude": 16.4215
+        "latitude": 48.19022,
+        "longitude": 16.289543
       },
       "preise": {
-        "diesel": 1.549,
-        "benzin": 1.519
+        "diesel": 2.214,
+        "benzin": 1.894
       },
       "oeffnungszeiten": {
         "montag": "24h",
@@ -339,17 +1689,204 @@
         "donnerstag": "24h",
         "freitag": "24h",
         "samstag": "24h",
-        "sonntag": "24h"
+        "sonntag": "24h",
+        "feiertag": "24h"
       },
-      "bewertung": {
-        "anzahlBewertungen": 55,
-        "durchschnittsbewertung": 3.7
-      },
+      "geoeffnet": true,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": false,
-        "barzahlung": false
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354702,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "HIRSCHSTETTNERSTRASSE 52, 1220 WIEN",
+      "koordinaten": {
+        "latitude": 48.238087,
+        "longitude": 16.460684
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.949
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-23:30",
+        "dienstag": "05:00-23:30",
+        "mittwoch": "05:00-23:30",
+        "donnerstag": "05:00-23:30",
+        "freitag": "05:00-23:30",
+        "samstag": "05:00-23:30",
+        "sonntag": "05:00-23:30",
+        "feiertag": "05:00-23:30"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354750,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "DONAUFELDER STRASSE 135, 1210 WIEN",
+      "koordinaten": {
+        "latitude": 48.252498,
+        "longitude": 16.426062
+      },
+      "preise": {
+        "diesel": 2.198,
+        "benzin": 1.898
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-23:30",
+        "dienstag": "05:00-23:30",
+        "mittwoch": "05:00-23:30",
+        "donnerstag": "05:00-23:30",
+        "freitag": "05:00-23:30",
+        "samstag": "05:00-23:30",
+        "sonntag": "05:00-23:30",
+        "feiertag": "05:00-23:30"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354660,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "RAUTENWEG 9, 1220 WIEN",
+      "koordinaten": {
+        "latitude": 48.263651,
+        "longitude": 16.459702
+      },
+      "preise": {
+        "diesel": 2.198,
+        "benzin": 1.914
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-23:00",
+        "dienstag": "06:00-23:00",
+        "mittwoch": "06:00-23:00",
+        "donnerstag": "06:00-23:00",
+        "freitag": "06:00-23:00",
+        "samstag": "06:00-23:00",
+        "sonntag": "06:00-23:00",
+        "feiertag": "06:00-23:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1469406,
+      "name": "JET TANKSTELLE",
+      "kette": "JET",
+      "adresse": "PRAGERSTRASSE 138, 1210 WIEN",
+      "koordinaten": {
+        "latitude": 48.278186,
+        "longitude": 16.388013
+      },
+      "preise": {
+        "diesel": 2.259,
+        "benzin": 1.949
+      },
+      "oeffnungszeiten": {
+        "montag": "05:30-23:30",
+        "dienstag": "05:30-23:30",
+        "mittwoch": "05:30-23:30",
+        "donnerstag": "05:30-23:30",
+        "freitag": "05:30-23:30",
+        "samstag": "05:30-23:30",
+        "sonntag": "05:30-23:30",
+        "feiertag": "05:30-23:30"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1475672,
+      "name": "Lohberger",
+      "kette": "Sonstige",
+      "adresse": "Richard Neutra Gasse 9B, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.270922,
+        "longitude": 16.430977
+      },
+      "preise": {
+        "diesel": 2.259,
+        "benzin": 1.899
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-20:00",
+        "dienstag": "06:00-20:00",
+        "mittwoch": "06:00-20:00",
+        "donnerstag": "06:00-20:00",
+        "freitag": "06:00-20:00",
+        "samstag": "08:00-18:00",
+        "sonntag": "08:00-18:00",
+        "feiertag": "08:00-18:00"
+      },
+      "geoeffnet": false,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": false,
+        "barzahlung": true
       },
       "tankautomat": true,
       "bemannt": false,
@@ -357,47 +1894,2363 @@
         "waschbox": false,
         "wc": false,
         "staubsauger": false,
-        "luftpumpe": true
+        "luftpumpe": false
       }
     },
     {
-      "id": 10,
-      "name": "OMV City",
-      "kette": "OMV",
+      "id": 41286,
+      "name": "Maroltinger Tankstelle",
+      "kette": "Sonstige",
+      "adresse": " Maroltingergasse 66, 1160 Wien",
       "koordinaten": {
-        "latitude": 48.2251,
-        "longitude": 16.3459
+        "latitude": 48.2102455,
+        "longitude": 16.3058551
       },
       "preise": {
-        "diesel": 1.659,
-        "benzin": 1.619
+        "diesel": 2.209,
+        "benzin": 1.919
       },
       "oeffnungszeiten": {
-        "montag": "05:00-23:30",
-        "dienstag": "05:00-23:30",
-        "mittwoch": "05:00-23:30",
-        "donnerstag": "05:00-23:30",
-        "freitag": "05:00-24:00",
-        "samstag": "06:00-24:00",
-        "sonntag": "06:00-23:00"
+        "montag": "07:00-18:00",
+        "dienstag": "07:00-18:00",
+        "mittwoch": "07:00-18:00",
+        "donnerstag": "07:00-18:00",
+        "freitag": "07:00-18:00",
+        "samstag": "08:00-13:00",
+        "sonntag": "geschlossen",
+        "feiertag": "geschlossen"
       },
-      "bewertung": {
-        "anzahlBewertungen": 302,
-        "durchschnittsbewertung": 4.6
-      },
+      "geoeffnet": false,
       "zahlungsmittel": {
         "debit": true,
         "kreditkarte": true,
-        "applePay": true,
         "barzahlung": true
       },
-      "tankautomat": true,
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 621285,
+      "name": "OIL! Tankstelle",
+      "kette": "Sonstige",
+      "adresse": "Laxenburger Straße 244, 1230 Wien",
+      "koordinaten": {
+        "latitude": 48.1388,
+        "longitude": 16.358
+      },
+      "preise": {
+        "diesel": 2.279,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-23:59",
+        "samstag": "06:00-23:59",
+        "sonntag": "09:00-22:00",
+        "feiertag": "09:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
       "bemannt": true,
       "ausstattung": {
         "waschbox": true,
-        "wc": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354918,
+      "name": "OMV - Wien Brünner Straße 172",
+      "kette": "OMV",
+      "adresse": "Brünner Strasse 172, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.28114,
+        "longitude": 16.41181
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.949
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354937,
+      "name": "OMV - Wien Groß-Enzersdorfer Straße 24-26",
+      "kette": "OMV",
+      "adresse": "Gross-Enzersdorfer Strasse 24-26, 1220 Wien",
+      "koordinaten": {
+        "latitude": 48.21686,
+        "longitude": 16.49345
+      },
+      "preise": {
+        "diesel": 2.299,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-24:00",
+        "dienstag": "06:00-24:00",
+        "mittwoch": "06:00-24:00",
+        "donnerstag": "06:00-24:00",
+        "freitag": "06:00-24:00",
+        "samstag": "06:00-24:00",
+        "sonntag": "06:00-24:00",
+        "feiertag": "06:00-24:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354916,
+      "name": "OMV - Wien Hirschstettner Straße 34",
+      "kette": "OMV",
+      "adresse": "Hirschstettner Strasse 34, 1220 Wien",
+      "koordinaten": {
+        "latitude": 48.24285,
+        "longitude": 16.45645
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.969
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-24:00",
+        "dienstag": "06:00-24:00",
+        "mittwoch": "06:00-24:00",
+        "donnerstag": "06:00-24:00",
+        "freitag": "06:00-24:00",
+        "samstag": "06:00-24:00",
+        "sonntag": "06:00-24:00",
+        "feiertag": "06:00-24:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354929,
+      "name": "OMV - Wien Laaer Berg-Straße 240",
+      "kette": "OMV",
+      "adresse": "Laaer Berg-Strasse 240, 1100 Wien",
+      "koordinaten": {
+        "latitude": 48.14818,
+        "longitude": 16.39664
+      },
+      "preise": {
+        "diesel": 2.269,
+        "benzin": 1.969
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-24:00",
+        "dienstag": "05:00-24:00",
+        "mittwoch": "05:00-24:00",
+        "donnerstag": "05:00-24:00",
+        "freitag": "05:00-24:00",
+        "samstag": "05:00-24:00",
+        "sonntag": "05:00-24:00",
+        "feiertag": "05:00-24:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1354905,
+      "name": "OMV - Wien Prager Straße 32",
+      "kette": "OMV",
+      "adresse": "Prager Strasse 32-34, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.26513,
+        "longitude": 16.39386
+      },
+      "preise": {
+        "diesel": 2.299,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": false,
+        "kreditkarte": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 33384,
+      "name": "SOCAR Wien-Altmannsdorferstraße",
+      "kette": "SOCAR",
+      "adresse": "Altmannsdorfer Straße 200a, 1230 Wien",
+      "koordinaten": {
+        "latitude": 48.1400585,
+        "longitude": 16.3237024
+      },
+      "preise": {
+        "diesel": 2.238,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 33381,
+      "name": "SOCAR Wien-Endresstraße",
+      "kette": "SOCAR",
+      "adresse": "Endresstraße 69, 1230 Wien",
+      "koordinaten": {
+        "latitude": 48.1486138,
+        "longitude": 16.2777595
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.953
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 447952,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "HUETTELBERGSTRASSE 4, 1140 WIEN",
+      "koordinaten": {
+        "latitude": 48.20271,
+        "longitude": 16.25757
+      },
+      "preise": {
+        "diesel": 2.259,
+        "benzin": 1.959
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 437498,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "HADIKGASSE 128-134, 1140 WIEN",
+      "koordinaten": {
+        "latitude": 48.190443,
+        "longitude": 16.294513
+      },
+      "preise": {
+        "diesel": 2.224,
+        "benzin": 1.904
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 402052,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "LAINZERSTRASSE 14, 1130 WIEN",
+      "koordinaten": {
+        "latitude": 48.18551,
+        "longitude": 16.29624
+      },
+      "preise": {
+        "diesel": 2.234,
+        "benzin": 1.914
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 448121,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "LINZER STR 2A, 1150 WIEN",
+      "koordinaten": {
+        "latitude": 48.19039,
+        "longitude": 16.32173
+      },
+      "preise": {
+        "diesel": 2.199,
+        "benzin": 1.899
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 370714,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "AM KAISERMUEHLENDAMM 140, 1220 WIEN",
+      "koordinaten": {
+        "latitude": 48.20715,
+        "longitude": 16.44691
+      },
+      "preise": {
+        "diesel": 2.289,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1469566,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "SEESTADTSTRASSE 6, 1220 WIEN",
+      "koordinaten": {
+        "latitude": 48.216561,
+        "longitude": 16.505235
+      },
+      "preise": {
+        "diesel": 2.289,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 450523,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "PFENNINGGELDG 2/ECKE HERBSTSTRASSE, 1160 WIEN",
+      "koordinaten": {
+        "latitude": 48.20786,
+        "longitude": 16.31328
+      },
+      "preise": {
+        "diesel": 2.289,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 437497,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "GERSTHOFERSTRASSE 2, 1180 WIEN",
+      "koordinaten": {
+        "latitude": 48.229112,
+        "longitude": 16.32895
+      },
+      "preise": {
+        "diesel": 2.319,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 427017,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "AUSSTELLUNGSSTRASSE 4, 1020 WIEN",
+      "koordinaten": {
+        "latitude": 48.21777,
+        "longitude": 16.39464
+      },
+      "preise": {
+        "diesel": 2.219,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 450524,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "WAGRAMERSTRASSE 14, 1220 WIEN",
+      "koordinaten": {
+        "latitude": 48.23367,
+        "longitude": 16.42036
+      },
+      "preise": {
+        "diesel": 2.199,
+        "benzin": 1.919
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 395309,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "DONAUSTADTSTRASSE 37C, 1220 WIEN",
+      "koordinaten": {
+        "latitude": 48.22704,
+        "longitude": 16.44498
+      },
+      "preise": {
+        "diesel": 2.219,
+        "benzin": 1.919
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 450350,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "DARINGERGASSE 1A, 1190 WIEN",
+      "koordinaten": {
+        "latitude": 48.24722,
+        "longitude": 16.33481
+      },
+      "preise": {
+        "diesel": 2.319,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-21:00",
+        "dienstag": "06:00-21:00",
+        "mittwoch": "06:00-21:00",
+        "donnerstag": "06:00-21:00",
+        "freitag": "06:00-21:00",
+        "samstag": "06:00-21:00",
+        "sonntag": "07:00-21:00",
+        "feiertag": "07:00-21:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 431256,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "HEILIGENSTAEDTERSTR. 60, 1190 WIEN",
+      "koordinaten": {
+        "latitude": 48.24161,
+        "longitude": 16.36138
+      },
+      "preise": {
+        "diesel": 2.319,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 449481,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "FLORIDSDORFER HAUPTSTR 17, 1210 WIEN",
+      "koordinaten": {
+        "latitude": 48.25439,
+        "longitude": 16.39411
+      },
+      "preise": {
+        "diesel": 2.229,
+        "benzin": 1.929
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 307172,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "GRINZINGERSTRASSE 137, 1190 WIEN",
+      "koordinaten": {
+        "latitude": 48.25463,
+        "longitude": 16.36399
+      },
+      "preise": {
+        "diesel": 2.319,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "07:00-22:00",
+        "feiertag": "07:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 450002,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "WAGRAMER STRASSE 203, 1210 WIEN",
+      "koordinaten": {
+        "latitude": 48.26443,
+        "longitude": 16.45486
+      },
+      "preise": {
+        "diesel": 2.199,
+        "benzin": 1.919
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 277894,
+      "name": "Shell Austria",
+      "kette": "Shell",
+      "adresse": "HIRSCHSTETTNERSTRASSE 24, 1220 WIEN",
+      "koordinaten": {
+        "latitude": 48.24412,
+        "longitude": 16.45453
+      },
+      "preise": {
+        "diesel": 2.249,
+        "benzin": 1.959
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 6070,
+      "name": "TANKEnergie Ringgarage",
+      "kette": "Sonstige",
+      "adresse": "Untere Viaduktgasse 47-49, 1030 Wien",
+      "koordinaten": {
+        "latitude": 48.2066605,
+        "longitude": 16.3873229
+      },
+      "preise": {
+        "diesel": 2.239,
+        "benzin": 1.939
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-23:00",
+        "dienstag": "05:00-23:00",
+        "mittwoch": "05:00-23:00",
+        "donnerstag": "05:00-23:00",
+        "freitag": "05:00-23:00",
+        "samstag": "05:00-23:00",
+        "sonntag": "05:00-23:00",
+        "feiertag": "05:00-23:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
         "staubsauger": true,
-        "luftpumpe": true
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1494440,
+      "name": "TMC Werkstatt & Tankstelle",
+      "kette": "Sonstige",
+      "adresse": "Rechte Wienzeile 43, 1050 Wien",
+      "koordinaten": {
+        "latitude": 48.1963966,
+        "longitude": 16.358812
+      },
+      "preise": {
+        "diesel": 2.169,
+        "benzin": 1.869
+      },
+      "oeffnungszeiten": {
+        "montag": "07:00-19:00",
+        "dienstag": "07:00-19:00",
+        "mittwoch": "07:00-19:00",
+        "donnerstag": "07:00-19:00",
+        "freitag": "07:00-19:00",
+        "samstag": "07:00-19:00",
+        "sonntag": "geschlossen",
+        "feiertag": "geschlossen"
+      },
+      "geoeffnet": false,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 34946,
+      "name": "Trötzmüller Garage",
+      "kette": "Sonstige",
+      "adresse": "Pouthongasse 15 - 17, 1150 Wien",
+      "koordinaten": {
+        "latitude": 48.1992287,
+        "longitude": 16.3298807
+      },
+      "preise": {
+        "diesel": 2.229,
+        "benzin": 1.959
+      },
+      "oeffnungszeiten": {
+        "montag": "06:30-19:00",
+        "dienstag": "06:30-19:00",
+        "mittwoch": "06:30-19:00",
+        "donnerstag": "06:30-19:00",
+        "freitag": "06:30-19:00",
+        "samstag": "06:30-19:00",
+        "sonntag": "geschlossen",
+        "feiertag": "geschlossen"
+      },
+      "geoeffnet": false,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": false,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1473829,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Laaer Bergstraße 207, 1100 Wien",
+      "koordinaten": {
+        "latitude": 48.15160789,
+        "longitude": 16.3968349
+      },
+      "preise": {
+        "diesel": 2.195,
+        "benzin": 1.894
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-23:00",
+        "dienstag": "06:00-23:00",
+        "mittwoch": "06:00-23:00",
+        "donnerstag": "06:00-23:00",
+        "freitag": "06:00-23:00",
+        "samstag": "07:00-23:00",
+        "sonntag": "07:00-23:00",
+        "feiertag": "07:00-23:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1475111,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Altmannsdorferstraße 150, 1230 Wien",
+      "koordinaten": {
+        "latitude": 48.154766,
+        "longitude": 16.31935
+      },
+      "preise": {
+        "diesel": 2.238,
+        "benzin": 1.946
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-24:00",
+        "dienstag": "05:00-24:00",
+        "mittwoch": "05:00-24:00",
+        "donnerstag": "05:00-24:00",
+        "freitag": "05:00-24:00",
+        "samstag": "05:00-24:00",
+        "sonntag": "05:00-24:00",
+        "feiertag": "05:00-24:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1473828,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Grenzackerstraße 2-4, 1100 Wien",
+      "koordinaten": {
+        "latitude": 48.162894,
+        "longitude": 16.379636
+      },
+      "preise": {
+        "diesel": 2.195,
+        "benzin": 1.894
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1473830,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Absberggasse 28, 1100 Wien",
+      "koordinaten": {
+        "latitude": 48.17106,
+        "longitude": 16.388597
+      },
+      "preise": {
+        "diesel": 2.195,
+        "benzin": 1.894
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1476471,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Margaretenstraße 28, 1040 Wien",
+      "koordinaten": {
+        "latitude": 48.19633,
+        "longitude": 16.36464
+      },
+      "preise": {
+        "diesel": 2.184,
+        "benzin": 1.864
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "08:00-22:00",
+        "sonntag": "08:00-22:00",
+        "feiertag": "08:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1477241,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Bennoplatz 4, 1080 Wien",
+      "koordinaten": {
+        "latitude": 48.21195,
+        "longitude": 16.3418
+      },
+      "preise": {
+        "diesel": 2.247,
+        "benzin": 1.939
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-21:00",
+        "dienstag": "06:00-21:00",
+        "mittwoch": "06:00-21:00",
+        "donnerstag": "06:00-21:00",
+        "freitag": "06:00-21:00",
+        "samstag": "07:00-20:00",
+        "sonntag": "08:00-19:00",
+        "feiertag": "08:00-19:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1493412,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Engerthstraße 146, 1200 Wien",
+      "koordinaten": {
+        "latitude": 48.233780449763955,
+        "longitude": 16.391924750717475
+      },
+      "preise": {
+        "diesel": 2.219,
+        "benzin": 1.978
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "07:00-22:00",
+        "feiertag": "07:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1473551,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Krottenbachstraße 233, 1190 Wien",
+      "koordinaten": {
+        "latitude": 48.2456615,
+        "longitude": 16.3164295
+      },
+      "preise": {
+        "diesel": 2.299,
+        "benzin": 1.974
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1473491,
+      "name": "Turmöl",
+      "kette": "Turmöl",
+      "adresse": "Pragerstraße 155, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.276582,
+        "longitude": 16.388104
+      },
+      "preise": {
+        "diesel": 2.259,
+        "benzin": 1.949
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1469126,
+      "name": "Turmöl Quick",
+      "kette": "Turmöl",
+      "adresse": "Breitenfurterstraße 473, 1230 Wien",
+      "koordinaten": {
+        "latitude": 48.137832,
+        "longitude": 16.257546
+      },
+      "preise": {
+        "diesel": 2.234,
+        "benzin": 1.944
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1472147,
+      "name": "Turmöl Quick",
+      "kette": "Turmöl",
+      "adresse": "Altmannsdorfer Straße 96, 1120 Wien",
+      "koordinaten": {
+        "latitude": 48.1618,
+        "longitude": 16.31747
+      },
+      "preise": {
+        "diesel": 2.233,
+        "benzin": 1.941
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1469506,
+      "name": "Turmöl Quick",
+      "kette": "Turmöl",
+      "adresse": "Hardtmuthgasse 51, 1100 Wien",
+      "koordinaten": {
+        "latitude": 48.170174,
+        "longitude": 16.370448
+      },
+      "preise": {
+        "diesel": 2.184,
+        "benzin": 1.864
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-21:00",
+        "dienstag": "06:00-21:00",
+        "mittwoch": "06:00-21:00",
+        "donnerstag": "06:00-21:00",
+        "freitag": "06:00-21:00",
+        "samstag": "06:00-21:00",
+        "sonntag": "06:00-21:00",
+        "feiertag": "06:00-21:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474608,
+      "name": "Turmöl Quick",
+      "kette": "Turmöl",
+      "adresse": "Gadnergasse 1, 1110 Wien",
+      "koordinaten": {
+        "latitude": 48.16636,
+        "longitude": 16.41091
+      },
+      "preise": {
+        "diesel": 2.19,
+        "benzin": 1.889
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 41826,
+      "name": "Turmöl Quick",
+      "kette": "Turmöl",
+      "adresse": "Schlossallee 2, 1140 Wien",
+      "koordinaten": {
+        "latitude": 48.1893108,
+        "longitude": 16.314299
+      },
+      "preise": {
+        "diesel": 2.184,
+        "benzin": 1.864
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 35866,
+      "name": "Yachthafen Marina Wien",
+      "kette": "Sonstige",
+      "adresse": "Handelskai 343, 1020 Wien",
+      "koordinaten": {
+        "latitude": 48.2081304,
+        "longitude": 16.4290759
+      },
+      "preise": {
+        "diesel": 2.289,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "10:00-18:00",
+        "dienstag": "10:00-18:00",
+        "mittwoch": "10:00-18:00",
+        "donnerstag": "10:00-18:00",
+        "freitag": "10:00-18:00",
+        "samstag": "10:00-18:00",
+        "sonntag": "10:00-18:00",
+        "feiertag": "10:00-18:00"
+      },
+      "geoeffnet": false,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 4311,
+      "name": "boesch energy,  turmöl",
+      "kette": "Turmöl",
+      "adresse": "Hernalser Hauptstrasse 173-175, 1170 Wien",
+      "koordinaten": {
+        "latitude": 48.2231967,
+        "longitude": 16.3157915
+      },
+      "preise": {
+        "diesel": 2.244,
+        "benzin": 1.934
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 4313,
+      "name": "boesch energy,  turmöl",
+      "kette": "Turmöl",
+      "adresse": "Baldiagasse 14a, 1160 Wien",
+      "koordinaten": {
+        "latitude": 48.215105,
+        "longitude": 16.3244884
+      },
+      "preise": {
+        "diesel": 2.244,
+        "benzin": 1.934
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-24:00",
+        "dienstag": "06:00-24:00",
+        "mittwoch": "06:00-24:00",
+        "donnerstag": "06:00-24:00",
+        "freitag": "06:00-24:00",
+        "samstag": "06:00-24:00",
+        "sonntag": "06:00-24:00",
+        "feiertag": "06:00-24:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": true,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1475831,
+      "name": "boesch energy,  turmöl",
+      "kette": "Turmöl",
+      "adresse": "Brünnerstr. 64, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.26578,
+        "longitude": 16.4036
+      },
+      "preise": {
+        "diesel": 2.164,
+        "benzin": 1.864
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1151451,
+      "name": "boesch energy, turmöl",
+      "kette": "Turmöl",
+      "adresse": "Schoenbrunner Strasse 213, 1120 Wien",
+      "koordinaten": {
+        "latitude": 48.18452,
+        "longitude": 16.33505
+      },
+      "preise": {
+        "diesel": 2.184,
+        "benzin": 1.864
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": true,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474287,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Breitenfurterstrasse 215, 1230 Wien",
+      "koordinaten": {
+        "latitude": 48.156939,
+        "longitude": 16.305341
+      },
+      "preise": {
+        "diesel": 2.259,
+        "benzin": null
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "07:00-22:00",
+        "sonntag": "07:00-22:00",
+        "feiertag": "07:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474210,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Grenzackerstrasse 6-8, 1100 Wien",
+      "koordinaten": {
+        "latitude": 48.163473,
+        "longitude": 16.377225
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.929
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474283,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Kaiserebersdorferstrasse 48, 1110 Wien",
+      "koordinaten": {
+        "latitude": 48.167349,
+        "longitude": 16.426899
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474281,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Gudrunstrasse 116 - 118, 1100 Wien",
+      "koordinaten": {
+        "latitude": 48.17806,
+        "longitude": 16.37857
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "07:00-22:00",
+        "feiertag": "07:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474280,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Oberzellergasse 2a, 1030 Wien",
+      "koordinaten": {
+        "latitude": 48.193838,
+        "longitude": 16.396971
+      },
+      "preise": {
+        "diesel": null,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474279,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Handelskai 388a, 1020 Wien",
+      "koordinaten": {
+        "latitude": 48.2032,
+        "longitude": 16.4358
+      },
+      "preise": {
+        "diesel": 2.299,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-21:00",
+        "dienstag": "06:00-21:00",
+        "mittwoch": "06:00-21:00",
+        "donnerstag": "06:00-21:00",
+        "freitag": "06:00-21:00",
+        "samstag": "06:00-21:00",
+        "sonntag": "07:00-21:00",
+        "feiertag": "07:00-21:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474214,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Biberhaufenweg 115, 1220 Wien",
+      "koordinaten": {
+        "latitude": 48.202378,
+        "longitude": 16.473838
+      },
+      "preise": {
+        "diesel": 2.299,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474289,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Gersthofer Strasse Nr. 2b, 1180 Wien",
+      "koordinaten": {
+        "latitude": 48.226999,
+        "longitude": 16.326521
+      },
+      "preise": {
+        "diesel": 2.319,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-21:00",
+        "dienstag": "06:00-21:00",
+        "mittwoch": "06:00-21:00",
+        "donnerstag": "06:00-21:00",
+        "freitag": "06:00-21:00",
+        "samstag": "07:00-21:00",
+        "sonntag": "07:00-21:00",
+        "feiertag": "07:00-21:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474219,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Jägerstrasse 60, 1200 Wien",
+      "koordinaten": {
+        "latitude": 48.235,
+        "longitude": 16.37054
+      },
+      "preise": {
+        "diesel": 2.319,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474213,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Donaustadtstrasse 43, 1220 Wien",
+      "koordinaten": {
+        "latitude": 48.222678,
+        "longitude": 16.44443
+      },
+      "preise": {
+        "diesel": 2.219,
+        "benzin": 1.919
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474290,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Krottenbachstrasse 32-34, 1190 Wien",
+      "koordinaten": {
+        "latitude": 48.2407,
+        "longitude": 16.3393
+      },
+      "preise": {
+        "diesel": 2.319,
+        "benzin": 1.989
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-23:00",
+        "dienstag": "06:00-23:00",
+        "mittwoch": "06:00-23:00",
+        "donnerstag": "06:00-23:00",
+        "freitag": "06:00-23:00",
+        "samstag": "06:00-23:00",
+        "sonntag": "06:00-23:00",
+        "feiertag": "06:00-23:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474284,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Leopoldauerstrasse 180, 1210 Wien",
+      "koordinaten": {
+        "latitude": 48.2624,
+        "longitude": 16.4359
+      },
+      "preise": {
+        "diesel": 2.219,
+        "benzin": 1.919
+      },
+      "oeffnungszeiten": {
+        "montag": "24h",
+        "dienstag": "24h",
+        "mittwoch": "24h",
+        "donnerstag": "24h",
+        "freitag": "24h",
+        "samstag": "24h",
+        "sonntag": "24h",
+        "feiertag": "24h"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474212,
+      "name": "eni",
+      "kette": "Eni",
+      "adresse": "Rautenweg 13, 1220 Wien",
+      "koordinaten": {
+        "latitude": 48.263207,
+        "longitude": 16.461068
+      },
+      "preise": {
+        "diesel": 2.219,
+        "benzin": 1.939
+      },
+      "oeffnungszeiten": {
+        "montag": "05:00-22:00",
+        "dienstag": "05:00-22:00",
+        "mittwoch": "05:00-22:00",
+        "donnerstag": "05:00-22:00",
+        "freitag": "05:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "08:00-21:00",
+        "feiertag": "08:00-21:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": false,
+      "bemannt": true,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
+      }
+    },
+    {
+      "id": 1474288,
+      "name": "eni24",
+      "kette": "Eni",
+      "adresse": "Felberstraße vis a vis 102, 1150 Wien",
+      "koordinaten": {
+        "latitude": 48.193432,
+        "longitude": 16.321006
+      },
+      "preise": {
+        "diesel": 2.184,
+        "benzin": 1.864
+      },
+      "oeffnungszeiten": {
+        "montag": "06:00-22:00",
+        "dienstag": "06:00-22:00",
+        "mittwoch": "06:00-22:00",
+        "donnerstag": "06:00-22:00",
+        "freitag": "06:00-22:00",
+        "samstag": "06:00-22:00",
+        "sonntag": "06:00-22:00",
+        "feiertag": "06:00-22:00"
+      },
+      "geoeffnet": true,
+      "zahlungsmittel": {
+        "debit": true,
+        "kreditkarte": true,
+        "barzahlung": true
+      },
+      "tankautomat": true,
+      "bemannt": false,
+      "ausstattung": {
+        "waschbox": false,
+        "wc": false,
+        "staubsauger": false,
+        "luftpumpe": false
       }
     }
   ]
