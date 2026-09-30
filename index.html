@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Tankstellen Finder</title>
-
+    <title>Tankstellen finder · Wien 21</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="script.js"></script>
 </head>
-
 <body>
-
-    <header>
-        <div class="header-inhalt">
-            <h1>⛽ Silas Tankstellen Finder</h1>
-            <p>Finde Tankstellen und vergleiche aktuelle Preise</p>
-        </div>
-    </header>
-
+    <header><a class="marke" href="index.html"><span class="logo" aria-hidden="true">⛽</span><h1>Tankstellen finder</h1></a><span class="ort">Wien / 21. Bezirk</span></header>
     <main>
-
-        <div class="filter-bereich">
-            <h2>Tankstellen</h2>
-
-            <input
-                type="text"
-                id="suche"
-                placeholder="Tankstelle suchen..."
-            >
+        <section class="einleitung"><p class="eyebrow">UNTERWEGS IN FLORIDSDORF</p><h2>Dein nächster Tankstopp.</h2><p>Alle unsere Tankstellen auf einer Karte. Entdecken, auswählen und Preise vergleichen.</p></section>
+        <section class="routen-bereich" aria-labelledby="routen-titel">
+            <h2 id="routen-titel">Wie weit ist dein Tankstopp entfernt?</h2>
+            <form id="routen-form">
+                <div class="adressfeld"><label for="startadresse">Startadresse in Floridsdorf</label>
+                <input id="startadresse" name="startadresse" type="text" required minlength="5" maxlength="200" placeholder="Brünner Straße 57, 1210 Wien" autocomplete="off" aria-describedby="routen-hilfe"></div>
+                <button id="berechnen" type="submit">Entfernungen berechnen</button>
+            </form>
+            <div class="kosten-eingaben">
+                <div><label for="kraftstoff">Kraftstoff</label><select id="kraftstoff"><option value="benzin" selected>Benzin</option><option value="diesel">Diesel</option></select></div>
+                <div class="tankmengen-feld"><label for="tankmenge-slider">Wie viel möchtest du tanken? <output id="tankmenge-wert" for="tankmenge-slider tankmenge-zahl">40 Liter</output></label>
+                    <div class="tankmengen-regler"><input id="tankmenge-slider" type="range" min="1" max="100" step="1" value="40"><label class="nur-screenreader" for="tankmenge-zahl">Tankmenge in Litern</label><input id="tankmenge-zahl" type="number" min="1" max="100" step="1" value="40" aria-describedby="tankmenge-fehler"></div>
+                    <p id="tankmenge-fehler" role="status"></p>
+                </div>
+            </div>
+            <p class="kosten-modell">Kostenvergleich für einen eigenen Tankausflug hin und zurück: Tankbetrag + Fahrtverbrauch zum Preis der Zieltankstelle + Verschleiß. Vergleichswert, nicht nur der Kassenbon. Die Fahrzeit wird nicht in Geld umgerechnet.</p>
+            <p id="routen-hilfe">Autostrecken ab deiner Startadresse · Fahrzeiten geschätzt, ohne Echtzeitverkehr.</p>
+            <p id="routen-status" role="status" aria-live="polite"></p>
+            <fieldset id="adress-auswahl" hidden><legend>Bitte die richtige Startadresse auswählen</legend><div id="adress-treffer"></div></fieldset>
+            <p class="routen-quellen">Adresssuche: <a href="https://nominatim.org/">Nominatim</a> / © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a> · Routen: <a href="https://openrouteservice.org/">openrouteservice</a> / © OpenStreetMap-Mitwirkende</p>
+        </section>
+        <div class="entdecker">
+            <aside class="seitenleiste" aria-label="Tankstellen suchen">
+                <div class="suche-kopf"><label for="suche">Welche Tankstelle suchst du?</label><input type="search" id="suche" placeholder="Name, Marke oder Straße …"><div class="ergebnis-zeile"><h2>Tankstellen</h2><span id="anzahl" role="status">Lädt …</span></div></div>
+                <div id="tankstellen-liste" class="tankstellen-liste"><p class="hinweis">Tankstellen werden geladen …</p></div>
+                <p class="daten-hinweis">Preise aus unserem Datensatz, keine Live-Preise. Angaben pro Liter.</p>
+            </aside>
+            <section class="karten-bereich" aria-label="Interaktive Tankstellenkarte">
+                <div class="karten-werkzeuge"><span class="karten-label">● Floridsdorf & Umgebung</span><button id="alle-anzeigen" type="button" disabled>Alle anzeigen ⤢</button></div>
+                <div id="karte" tabindex="0" aria-label="Tankstellenkarte. Mit den Pfeiltasten verschieben, mit Plus und Minus zoomen."></div>
+                <p id="karten-status" class="karten-status" role="status" hidden></p>
+                <div class="karten-tipp">Pin auswählen · Karte verschieben · Mit + / − zoomen</div>
+            </section>
         </div>
-
-        <!-- Hier werden die Tankstellen mit JavaScript eingefügt -->
-        <div id="tankstellen-liste" class="tankstellen-liste"></div>
-
     </main>
-
-    <footer>
-        <p>Tankstellen App – Schulprojekt</p>
-    </footer>
-
-    <script src="script.js"></script>
-
+    <footer><span>Tankstellen finder · Schulprojekt</span><span>Standorte: <a href="https://www.spritpreisrechner.at/" target="_blank" rel="noopener noreferrer">E-Control Spritpreisrechner</a></span></footer>
+    <noscript><p class="hinweis">Bitte aktiviere JavaScript, um die Karte und Tankstellen anzuzeigen.</p></noscript>
 </body>
 </html>

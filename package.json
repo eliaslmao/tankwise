@@ -1,0 +1,8 @@
+{
+  "name": "floridsdorf-tankstellen-finder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lokale Tankstellenkarte mit Fahrstrecken für Wien Floridsdorf",
+  "engines": { "node": ">=22.0.0" },
+  "scripts": { "start": "node server.cjs", "test": "node --test test/*.test.cjs" }
+}
