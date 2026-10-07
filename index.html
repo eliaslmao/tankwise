@@ -17,27 +17,35 @@
             <h2 id="routen-titel">Wie weit ist dein Tankstopp entfernt?</h2>
             <form id="routen-form">
                 <div class="adressfeld"><label for="startadresse">Startadresse in Floridsdorf</label>
-                <input id="startadresse" name="startadresse" type="text" required minlength="5" maxlength="200" placeholder="Brünner Straße 57, 1210 Wien" autocomplete="off" aria-describedby="routen-hilfe"></div>
+                <div class="adress-eingabe">
+                <input id="startadresse" name="startadresse" type="text" required minlength="5" maxlength="200" placeholder="Brünner Straße 57, 1210 Wien" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="strassen-vorschlaege" aria-describedby="hausnummer-hilfe adress-fehler">
+                <div id="hausnummer-vorschlag" class="hausnummer-vorschlag" aria-hidden="true" hidden><span id="hausnummer-praefix"></span><span id="hausnummer-beispiel"></span></div>
+                </div>
+                <p id="adress-fehler" class="adress-fehler" role="alert" hidden></p>
+                <span id="hausnummer-hilfe" class="nur-screenreader">Nach dem Straßennamen bitte deine Hausnummer ergänzen. Die graue Nummer ist nur ein Beispiel und wird nicht übernommen.</span>
+                <div id="strassen-vorschlaege" class="strassen-vorschlaege" role="listbox" aria-label="Straßen in Floridsdorf" hidden></div>
+                </div>
                 <button id="berechnen" type="submit">Entfernungen berechnen</button>
             </form>
             <div class="kosten-eingaben">
-                <div><label for="kraftstoff">Kraftstoff</label><select id="kraftstoff"><option value="benzin" selected>Benzin</option><option value="diesel">Diesel</option></select></div>
+                <fieldset id="kraftstoff" class="kraftstoff-feld"><legend>Kraftstoff</legend>
+                    <div class="kraftstoff-toggle">
+                        <input type="radio" id="kraftstoff-benzin" name="kraftstoff" value="benzin" checked><label for="kraftstoff-benzin">Benzin</label>
+                        <input type="radio" id="kraftstoff-diesel" name="kraftstoff" value="diesel"><label for="kraftstoff-diesel">Diesel</label>
+                    </div>
+                </fieldset>
                 <div class="tankmengen-feld"><label for="tankmenge-slider">Wie viel möchtest du tanken? <output id="tankmenge-wert" for="tankmenge-slider tankmenge-zahl">40 Liter</output></label>
                     <div class="tankmengen-regler"><input id="tankmenge-slider" type="range" min="1" max="100" step="1" value="40"><label class="nur-screenreader" for="tankmenge-zahl">Tankmenge in Litern</label><input id="tankmenge-zahl" type="number" min="1" max="100" step="1" value="40" aria-describedby="tankmenge-fehler"></div>
                     <p id="tankmenge-fehler" role="status"></p>
                 </div>
             </div>
-            <p class="kosten-modell">Kostenvergleich für einen eigenen Tankausflug hin und zurück: Tankbetrag + Fahrtverbrauch zum Preis der Zieltankstelle + Verschleiß. Vergleichswert, nicht nur der Kassenbon. Die Fahrzeit wird nicht in Geld umgerechnet.</p>
-            <p id="routen-hilfe">Autostrecken ab deiner Startadresse · Fahrzeiten geschätzt, ohne Echtzeitverkehr.</p>
             <p id="routen-status" role="status" aria-live="polite"></p>
             <fieldset id="adress-auswahl" hidden><legend>Bitte die richtige Startadresse auswählen</legend><div id="adress-treffer"></div></fieldset>
-            <p class="routen-quellen">Adresssuche: <a href="https://nominatim.org/">Nominatim</a> / © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a> · Routen: <a href="https://openrouteservice.org/">openrouteservice</a> / © OpenStreetMap-Mitwirkende</p>
         </section>
         <div class="entdecker">
             <aside class="seitenleiste" aria-label="Tankstellen suchen">
                 <div class="suche-kopf"><label for="suche">Welche Tankstelle suchst du?</label><input type="search" id="suche" placeholder="Name, Marke oder Straße …"><div class="ergebnis-zeile"><h2>Tankstellen</h2><span id="anzahl" role="status">Lädt …</span></div></div>
                 <div id="tankstellen-liste" class="tankstellen-liste"><p class="hinweis">Tankstellen werden geladen …</p></div>
-                <p class="daten-hinweis">Preise aus unserem Datensatz, keine Live-Preise. Angaben pro Liter.</p>
             </aside>
             <section class="karten-bereich" aria-label="Interaktive Tankstellenkarte">
                 <div class="karten-werkzeuge"><span class="karten-label">● Floridsdorf & Umgebung</span><button id="alle-anzeigen" type="button" disabled>Alle anzeigen ⤢</button></div>
@@ -47,7 +55,30 @@
             </section>
         </div>
     </main>
-    <footer><span>Tankstellen finder · Schulprojekt</span><span>Standorte: <a href="https://www.spritpreisrechner.at/" target="_blank" rel="noopener noreferrer">E-Control Spritpreisrechner</a></span></footer>
+    <footer class="info-footer">
+        <div class="footer-kopf"><span>Tankstellen finder · Schulprojekt · Wien 21</span><span>Preise pro Liter · Keine Live-Preise</span></div>
+        <details class="berechnungs-info">
+            <summary>Wie kommen wir zu unseren Berechnungen?</summary>
+            <div class="berechnungs-inhalt">
+                <h2>Was steckt im Gesamtbetrag?</h2>
+                <p>Wir vergleichen einen eigenen Tankausflug von deiner Startadresse zur Tankstelle und zurück. Der Gesamtbetrag setzt sich aus dem Tankbetrag und dem zusätzlichen Fahrtaufwand zusammen. Er ist ein Vergleichswert und nicht allein der Kassenbon.</p>
+                <p class="berechnungs-formel">Gesamtkosten = Tankkosten + Spritkosten der Fahrt + Verschleiß</p>
+                <dl>
+                    <dt>Tankkosten</dt><dd>Deine gewählte Literzahl × Literpreis der gewählten Kraftstoffart an der Tankstelle.</dd>
+                    <dt>Spritkosten der Fahrt</dt><dd>Hin- und Rückstrecke × <span id="modell-verbrauch">6</span> l/100 km ÷ 100 × Literpreis der Zieltankstelle.</dd>
+                    <dt>Verschleiß</dt><dd>Hin- und Rückstrecke × <span id="modell-verschleiss">0,10 €</span>/km. Diese vereinfachte Annahme deckt Reifen, kilometerabhängige Wartung, Verschleiß und zusätzlichen Wertverlust ab. Spritkosten sind darin nicht enthalten; weitere Fahrzeugpauschalen werden nicht addiert.</dd>
+                </dl>
+                <h2>Strecke und Fahrzeit</h2>
+                <p>Grundlage ist die berechnete Autostrecke. Solange nur die Hinfahrt vorliegt, schätzen wir Hin- und Rückweg sowie die gesamte Fahrzeit mit dem Doppelten. Rückwege können wegen Einbahnstraßen abweichen. Sind separate Rückstrecken vorhanden, verwenden wir diese. Fahrzeiten sind Schätzungen ohne Echtzeitverkehr und werden nicht in Geld umgerechnet.</p>
+                <h2>Rangfolge und Ersparnis</h2>
+                <p>Wir sortieren nach Gesamtkosten, bei gleichen Beträgen nach der kürzeren Hin- und Rückstrecke. Die Ersparnis bezieht sich auf die Tankstelle mit der kürzesten Hinfahrt, die für deinen Kraftstoff einen gültigen Preis und eine gültige Route hat – unabhängig vom Suchfilter.</p>
+                <p>Fehlende Preise oder Strecken werden nicht als 0 € gewertet und nehmen nicht am Kostenranking teil. Intern rechnen wir ungerundet; nur die Anzeige wird gerundet. Die gespeicherten Kraftstoffpreise sind keine Live-Preise.</p>
+            </div>
+        </details>
+        <div class="footer-quellen"><p>Tankstellenstandorte: <a href="https://www.spritpreisrechner.at/" target="_blank" rel="noopener noreferrer">E-Control Spritpreisrechner</a></p>
+        <p class="routen-quellen">Straßenliste: <a href="https://www.data.gv.at/katalog/dataset/1d5c2411-9719-4c8f-b99d-57a5f4a4ae41">Stadt Wien – data.wien.gv.at</a> · Adresssuche: <a href="https://nominatim.org/">Nominatim</a> / © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a> · Routen: <a href="https://openrouteservice.org/">openrouteservice</a> / © OpenStreetMap-Mitwirkende</p>
+        </div>
+    </footer>
     <noscript><p class="hinweis">Bitte aktiviere JavaScript, um die Karte und Tankstellen anzuzeigen.</p></noscript>
 </body>
 </html>

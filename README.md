@@ -109,3 +109,9 @@ Die Referenz ist die nächstgelegene geeignete Tankstelle aus allen Daten, unabh
 Kostenprüfung: Das vorgegebene Beispiel ergibt 0,6 l Fahrtverbrauch, 0,96 EUR Fahrtsprit, 1,00 EUR Verschleiß, 1,96 EUR Fahrtkosten und **65,96 EUR Gesamtkosten**. Die sieben Frontend-Tests prüfen außerdem Mengenvalidierung, separate Rückstrecken, ungültige Daten, Rangfolge, Referenz, Adresswechsel und Änderungen ohne Netzwerkanfragen.
 
 Für diese Frontend-Erweiterung genügt ein Neuladen der Browserseite; ein Serverneustart ist nicht erforderlich. Ein visueller Browsertest war nicht verfügbar.
+
+## Direkter Start nach Adressprüfung
+
+Ein einzelner Treffer startet die Routenberechnung jetzt automatisch, wenn Nominatim Straße und Hausnummer exakt bestätigt und der Treffer in Floridsdorf liegt. Groß-/Kleinschreibung und Leerzeichen werden beim Vergleich ignoriert. Ein bloßer Straßentreffer oder eine abweichende Hausnummer wird nicht als Ersatz verwendet. Nicht bestätigte Adressen führen zu einer Fehlermeldung am Eingabefeld. Mehrere mögliche bestätigte Standorte erfordern weiterhin eine Auswahl, damit kein beliebiger Startpunkt verwendet wird.
+
+Nach dieser Änderung an `routing.cjs` ist ein Serverneustart erforderlich: Strg+C, dann `npm start`. Danach Browserseite neu laden.
