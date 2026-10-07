@@ -10,6 +10,17 @@ function validCoordinates(latitude, longitude) {
     return Number.isFinite(latitude) && Number.isFinite(longitude)
         && Math.abs(latitude) <= 90 && Math.abs(longitude) <= 180;
 }
+// Nur die tatsächlich angefragte Straße UND Hausnummer gelten als bestätigt.
+function matchesRequestedAddress(hit, query) {
+    const addressPart = query.split(',')[0].trim().replace(/\s+(?:1210\s+)?Wien$/i, '');
+    const parts = addressPart.match(/^(.+?)\s*(\d+[a-zA-Z]?(?:\s*[-/]\s*\d+[a-zA-Z]?)?)$/);
+    if (!parts || !hit.address?.house_number) return false;
+    const normalize = value => String(value).toLocaleLowerCase('de-AT').replace(/ß/g, 'ss')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '');
+    return normalize(parts[1]) === normalize(hit.address.road)
+        && normalize(parts[2]) === normalize(hit.address.house_number);
+}
+
 function isFloridsdorf(hit) {
     const a = hit.address ?? {};
     // Postleitzahl und Bounding-Box sind ausdrücklich kein Bezirksnachweis.
@@ -117,20 +128,29 @@ function createRoutingService({ stations, apiKey = '', fetchImpl = fetch,
             }
             const data = await upstreamJson(fetchImpl, url, { headers: { 'User-Agent': userAgent, Accept: 'application/json' } }, 'Nominatim');
             if (!Array.isArray(data)) throw new AppError(502, 'Die Adresssuche hat ungültige Daten geliefert.');
+            // Eine Hausadresse kann als Gebäude und zusätzlich als mehrere Geschäfte vorkommen.
+            // Allgemeine Adress-/Gebäudepunkte zuerst; ansonsten den ersten bestätigten POI verwenden.
+            const addressRank = hit => {
+                if (['house', 'building', 'residential'].includes(hit.type) || hit.class === 'building' || hit.category === 'building') return 0;
+                if (hit.addresstype === 'house') return 1;
+                return 2;
+            };
+            const normalizeAddress = text => String(text).toLocaleLowerCase('de-AT').replace(/ß/g, 'ss').replace(/\s+/g, '');
             const seen = new Set();
-            const matches = data.filter(isFloridsdorf).filter(hit => {
-                const identity = `${hit.lat},${hit.lon},${hit.display_name}`;
-                if (seen.has(identity)) return false;
-                seen.add(identity); return true;
-            }).map(hit => {
-                const candidate = { id: randomUUID(), label: hit.display_name,
+            const matches = data.filter(isFloridsdorf).filter(hit => matchesRequestedAddress(hit, query))
+                .sort((a, b) => addressRank(a) - addressRank(b)).filter(hit => {
+                    const identity = `${normalizeAddress(hit.address.road)}|${normalizeAddress(hit.address.house_number)}`;
+                    if (seen.has(identity)) return false;
+                    seen.add(identity); return true;
+                }).map(hit => {
+                const candidate = { id: randomUUID(), label: `${hit.address.road} ${hit.address.house_number}, 1210 Wien`,
                     latitude: Number(hit.lat), longitude: Number(hit.lon),
-                    note: hit.address.house_number ? '' : 'Keine Hausnummer gefunden – Startpunkt auf der Straße. Bitte prüfen.' };
+                    addressConfirmed: true };
                 candidates.set(candidate.id, { candidate, expires: now() + ttl });
                 return candidate;
             });
             const result = { candidates: matches, message: matches.length ? '' :
-                (data.length ? 'Die Treffer lassen sich nicht eindeutig einer Straßenadresse in Floridsdorf zuordnen. Bitte Straße, Hausnummer und Wien genauer angeben. Eine Postleitzahl allein genügt nicht.' :
+                (data.length ? 'Straße und Hausnummer konnten in Floridsdorf nicht bestätigt werden. Bitte beide Angaben prüfen.' :
                     'Keine passende Adresse gefunden. Bitte Straße, Hausnummer und Wien prüfen.') };
             cache.set(key, { result, expires: now() + ttl });
             prune();

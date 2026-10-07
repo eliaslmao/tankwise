@@ -188,7 +188,18 @@ function ladeZustand(aktiv) {
     berechnenButton.textContent = aktiv ? "Bitte warten …" : "Entfernungen berechnen";
     routenForm.setAttribute("aria-busy", String(aktiv));
 }
+function adressFehler(text) {
+    const feld = document.getElementById("adress-fehler");
+    feld.textContent = text;
+    feld.hidden = !text;
+    adressInput.setAttribute("aria-invalid", String(Boolean(text)));
+    if (text) {
+        hausnummerVorschlag.hidden = true;
+        routenStatus.textContent = "";
+    }
+}
 function verwerfeAlteRouten() {
+    adressFehler("");
     routenVersion++;
     routenAbbruch?.abort();
     routenAbbruch = new AbortController();
@@ -254,8 +265,12 @@ routenForm.addEventListener("submit", async event => {
     try {
         const data = await apiPost("/api/geocode", { query: adressInput.value.trim() }, routenAbbruch.signal);
         if (version !== routenVersion) return;
-        if (!data.candidates.length) { routenStatus.textContent = data.message; return; }
-        // Auch einzelne Treffer bestätigen lassen: Hausnummer und Startpunkt bleiben überprüfbar.
+        if (!data.candidates.length) { adressFehler(data.message || "Straße oder Hausnummer nicht gefunden. Bitte die Eingabe prüfen."); return; }
+        if (data.candidates.length === 1 && data.candidates[0].addressConfirmed) {
+            await berechneRouten(data.candidates[0], version);
+            return;
+        }
+        // Nur bei mehreren möglichen Standorten ist noch eine Auswahl erforderlich.
         routenStatus.textContent = `${data.candidates.length} passende Adresse(n) in Floridsdorf gefunden. Bitte auswählen.`;
         adressAuswahl.hidden = false;
         data.candidates.forEach(kandidat => {
@@ -331,35 +346,38 @@ function kostenHtml(id) {
     else if (k.savings < 0) vergleich = `${euro(-k.savings)} teurer als die nächstgelegene Tankstelle`;
     else vergleich = "Gleiche Gesamtkosten wie die nächstgelegene Tankstelle";
     const minutenGesamt = k.roundTripDurationSeconds > 0 && k.roundTripDurationSeconds < 60 ? "&lt; 1" : Math.round(k.roundTripDurationSeconds / 60);
-    const zeit = k.roundTripDurationSeconds === null ? "Fahrzeit nicht verfügbar" : `ca. ${minutenGesamt} Min. für Hin- und Rückfahrt${k.estimatedDuration ? " (geschätzt: doppelte Hinfahrt)" : " (ohne Echtzeitverkehr)"}`;
+    const zeit = k.roundTripDurationSeconds === null ? "Fahrzeit nicht verfügbar" : `ca. ${minutenGesamt} Min. für Hin- und Rückfahrt${k.estimatedDuration ? " (geschätzt)" : ""}`;
     return `${kopf}${beste ? '<p class="kosten-beste">Günstigste Option inklusive Fahrt</p>' : ''}
-        <dl class="kosten-zeilen"><div><dt>Hin- und Rückstrecke</dt><dd>${k.roundTripKm.toLocaleString("de-AT", { maximumFractionDigits: 1 })} km</dd></div>
+        <dl class="kosten-zeilen"><div><dt>Hin- und Rückstrecke${k.estimatedRoundTrip ? " (geschätzt)" : ""}</dt><dd>${k.roundTripKm.toLocaleString("de-AT", { maximumFractionDigits: 1 })} km</dd></div>
         <div><dt>Tankkosten (${selectedRefuelLiters} l)</dt><dd>${euro(k.refuelCost)}</dd></div>
         <div><dt>Fahrtkosten insgesamt</dt><dd>${euro(k.travelCost)}</dd></div>
         <div class="kosten-gesamt"><dt>Gesamtkosten</dt><dd>${euro(k.totalCost)}</dd></div></dl>
-        <p class="kosten-hinweis">${k.estimatedRoundTrip ? 'Hin- und Rückweg geschätzt · doppelte Hinfahrt. Rückwege können wegen Einbahnstraßen abweichen.' : 'Hin- und Rückweg getrennt berechnet.'} ${zeit}</p>
-        <p class="kosten-ersparnis">${vergleich}</p>
-        <details class="kosten-details"><summary>Fahrtkosten im Detail</summary><p>Fahrtverbrauch: ${k.travelFuelLiters.toLocaleString("de-AT", { maximumFractionDigits: 3 })} l<br>Sprit: ${euro(k.travelFuelCost)}<br>Verschleiß: ${euro(k.wearCost)}</p></details>`;
+        <p class="kosten-hinweis">${zeit}</p>
+        <p class="kosten-ersparnis">${vergleich}</p>`;
 }
 const fuelSelect = document.getElementById("kraftstoff");
 const literSlider = document.getElementById("tankmenge-slider");
 const literInput = document.getElementById("tankmenge-zahl");
 const literOutput = document.getElementById("tankmenge-wert");
 const literFehler = document.getElementById("tankmenge-fehler");
-selectedFuel = ["benzin", "diesel"].includes(fuelSelect.value) ? fuelSelect.value : "benzin";
+selectedFuel = document.getElementById("kraftstoff-diesel").checked ? "diesel" : "benzin";
 fuelSelect.value = selectedFuel;
 function setzeTankmenge(value) {
     selectedRefuelLiters = value;
     literSlider.value = String(value);
+    literSlider.setAttribute("style", `--slider-fill: ${(value - 1) / 99 * 100}%`);
     literInput.value = String(value);
     literOutput.textContent = `${value} Liter`;
     literFehler.textContent = "";
     literInput.setAttribute("aria-invalid", "false");
 }
 setzeTankmenge(COST_MODEL.defaultRefuelLiters);
-fuelSelect.addEventListener("change", () => {
+fuelSelect.addEventListener("change", event => {
+    if (event?.target?.name === "kraftstoff") fuelSelect.value = event.target.value;
     if (!["benzin", "diesel"].includes(fuelSelect.value)) return;
     selectedFuel = fuelSelect.value;
+    document.getElementById("kraftstoff-benzin").checked = selectedFuel === "benzin";
+    document.getElementById("kraftstoff-diesel").checked = selectedFuel === "diesel";
     aktualisiereRoutenAnzeige();
 });
 literSlider.addEventListener("input", () => {
@@ -379,3 +397,969 @@ literInput.addEventListener("input", () => {
 literInput.addEventListener("change", () => {
     if (!Number.isInteger(Number(literInput.value)) || Number(literInput.value) < 1 || Number(literInput.value) > 100) setzeTankmenge(selectedRefuelLiters);
 });
+
+
+// Lokaler Auszug ADRESSENOGD, GEB_BEZIRK=21; Stadt Wien – data.wien.gv.at.
+// Stand 01.10.2026. Ausschließlich Straßennamen, keine Hausnummern oder Nutzeradressen.
+const STRASSENNAMEN = [
+  "Achardgasse",
+  "Achengasse",
+  "Ackerweg",
+  "Aderklaaer Straße",
+  "Adolf-Amadeo-Gasse",
+  "Adolf-Loos-Gasse",
+  "Adolf-Loos-Weg",
+  "Adolf-Uthmann-Gasse",
+  "Adrienne-Gessner-Gasse",
+  "Aistgasse",
+  "Albertisgasse",
+  "Alfred-Huth-Gasse",
+  "Alfred-Nobel-Straße",
+  "Allißengasse",
+  "Almgasse",
+  "Alois-Appel-Hof",
+  "Alois-Negrelli-Gasse",
+  "Alpiltoweweg",
+  "Alte Leopoldauer Schleife",
+  "Alter Wiener Weg",
+  "Am Bisamberg",
+  "Am Bruckhaufen",
+  "Am Hubertusdamm",
+  "Am Häufel",
+  "Am Nordbahndamm",
+  "Am Nordwestbahnhof",
+  "Am Rollerdamm",
+  "Am Spitz",
+  "Am Wasserpark",
+  "Am oberen Kirchberg",
+  "Ampèregasse",
+  "Amselgasse",
+  "Amtsstraße",
+  "An der Schanze",
+  "An der Töllerschanze",
+  "An der oberen Alten Donau",
+  "Andreas-Hofer-Straße",
+  "Angelibad",
+  "Angerer Straße",
+  "Angyalföldstraße",
+  "Anichweg",
+  "Anna-Boschek-Platz",
+  "Anton-Anderer-Platz",
+  "Anton-Bosch-Gasse",
+  "Anton-Böck-Gasse",
+  "Anton-Dengler-Gasse",
+  "Anton-Haberzeth-Gasse",
+  "Anton-Kolig-Gasse",
+  "Anton-Schall-Gasse",
+  "Anton-Störck-Gasse",
+  "Antonie-Lehr-Straße",
+  "Arbeiterstrandbadstraße",
+  "Arnimgasse",
+  "Arnoldgasse",
+  "Auckenthalergasse",
+  "Audorfgasse",
+  "Auerhahngasse",
+  "Autokaderstraße",
+  "Axel-Corti-Gasse",
+  "Babitschgasse",
+  "Bahndammweg",
+  "Bahnhof Brünner Straße",
+  "Bahnhof Floridsdorf",
+  "Bahnhof Jedlersdorf",
+  "Bahnhof Leopoldau",
+  "Bahnhof Siemensstraße",
+  "Bahnhof Strandbäder",
+  "Bahnhof Strebersdorf",
+  "Bahnhofplatz",
+  "Bahnsteggasse",
+  "Bahnwächterhaus",
+  "Baldassgasse",
+  "Balgavyweg",
+  "Baumberggasse",
+  "Baumergasse",
+  "Beer-Hofmann-Gasse",
+  "Beer-Hofmann-Weg",
+  "Bellgasse",
+  "Bentheimstraße",
+  "Berglergasse",
+  "Berlagasse",
+  "Bernhard-Bolzano-Gasse",
+  "Bernreiterplatz",
+  "Bertlgasse",
+  "Berzeliusgasse",
+  "Berzeliusplatz",
+  "Bessemerstraße",
+  "Bieler Hof",
+  "Birneckergasse",
+  "Birnersteig",
+  "Blechschmidtgasse",
+  "Bodenstedtgasse",
+  "Bonitzgasse",
+  "Brachsengasse",
+  "Breitenweg",
+  "Brigittenauer Brücke",
+  "Brixweg",
+  "Broßmannplatz",
+  "Bruckhaufner Hauptstraße",
+  "Brunner-Lehenstein-Gasse",
+  "Bründelgasse",
+  "Brünner Straße",
+  "Bubergasse",
+  "Bunsengasse",
+  "Bussardgasse",
+  "Böhmgasse",
+  "Börnsteingasse",
+  "Büchnergasse",
+  "Carabelligasse",
+  "Carminweg",
+  "Carrogasse",
+  "Castlegasse",
+  "Christian-Bucher-Gasse",
+  "Claudia-Dietl-Platz",
+  "Clessgasse",
+  "Compars-Herrmann-Weg",
+  "Conrad-Lötsch-Hof",
+  "Cooperweg",
+  "Cordobaplatz",
+  "Coulombgasse",
+  "Czeija-Nissl-Gasse",
+  "Dachsensteig",
+  "Dafertgasse",
+  "Dag-Hammarskjöld-Hof",
+  "Dahliengasse",
+  "Dammäckergasse",
+  "Danningerweg",
+  "Dattlergasse",
+  "Demmergasse",
+  "Deublergasse",
+  "Deutschweg",
+  "Diamantgasse",
+  "Diderotgasse",
+  "Dietz-von-Weidenberg-Gasse",
+  "Dirndlgasse",
+  "Divischgasse",
+  "Doderergasse",
+  "Dolézalgasse",
+  "Dominik-Hofmann-Halle",
+  "Dominik-Wölfel-Gasse",
+  "Don-Bosco-Weg",
+  "Donaufelder Straße",
+  "Donauinsel",
+  "Donauinselplatz",
+  "Donauturmstraße",
+  "Donhofergasse",
+  "Dopschstraße",
+  "Dr.-Albert-Geßmann-Gasse",
+  "Dr.-Nekowitsch-Straße",
+  "Dr.-Skala-Straße",
+  "Dragonerhäufel",
+  "Dragoungasse",
+  "Draugasse",
+  "Drnekgasse",
+  "Drygalskiweg",
+  "Dunantgasse",
+  "Dückegasse",
+  "Ebereschengasse",
+  "Edelsteingasse",
+  "Edergasse",
+  "Edi-Finger-Straße",
+  "Edmund-Hawranek-Platz",
+  "Egon-Friedell-Gasse",
+  "Eichfeldergasse",
+  "Einzingergasse",
+  "Eipeldauer Straße",
+  "Eisenheldgasse",
+  "Elise-Richter-Weg",
+  "Emmi-Freundlich-Gasse",
+  "Empergergasse",
+  "Engelhorngasse",
+  "Entensteig",
+  "Erbpostgasse",
+  "Erna-Musik-Gasse",
+  "Ernst-Kein-Gasse",
+  "Ernst-Theumer-Hof",
+  "Ernst-Vasovec-Gasse",
+  "Eyblweg",
+  "Fahrbachgasse",
+  "Fallmerayerweg",
+  "Familienbad Luckenschwemmgasse",
+  "Familienbad Roda-Roda-Gasse",
+  "Feistlgasse",
+  "Feistritzgasse",
+  "Feldlerchengasse",
+  "Feldmausgasse",
+  "Felix-Slavik-Straße",
+  "Felmayergasse",
+  "Ferchenbauergasse",
+  "Ferdinand-Kaufmann-Platz",
+  "Ferdinand-Käs-Gasse",
+  "Ferdinand-Platzer-Gasse",
+  "Ferdinand-Pölz-Gasse",
+  "Fillenbaumgasse",
+  "Fischottergasse",
+  "Flandorferweg",
+  "Florian-Ott-Gasse",
+  "Florido Tower",
+  "Floridsdorfer Aupark",
+  "Floridsdorfer Bad",
+  "Floridsdorfer Hauptstraße",
+  "Floridsdorfer Markt",
+  "Floridusgasse",
+  "Franklinstraße",
+  "Franz-Bretschneider-Hof",
+  "Franz-Jonas-Platz",
+  "Franz-Jonas-Schule",
+  "Franz-Koch-Hof",
+  "Franz-Petritsch-Hof",
+  "Franz-Sebek-Straße",
+  "Frauenschuhgasse",
+  "Frauenstiftgasse",
+  "Freiheitsplatz",
+  "Freiligrathplatz",
+  "Freytaggasse",
+  "Friederike-Klauner-Gasse",
+  "Friedhof Jedlesee",
+  "Friedhof Leopoldau",
+  "Friedhof Stammersdorf-Ort",
+  "Friedhof Stammersdorf-Zentral",
+  "Friedrich-Manhart-Straße",
+  "Friedstraße",
+  "Fritz-Kandl-Gasse",
+  "Frohes-Schaffen-Weg",
+  "Frömmlgasse",
+  "Fuchsensteig",
+  "Fultonstraße",
+  "Funkgasse",
+  "Fännergasse",
+  "Föhrenweg",
+  "Galvanigasse",
+  "Garcia-Lorca-Hof",
+  "Gaswerk Leopoldau",
+  "Gaswerkstraße",
+  "Gebauergasse",
+  "Georg-Schicht-Platz",
+  "Georgistraße",
+  "Gerasdorfer Straße",
+  "Gerichtsgasse",
+  "Gerlosplatz",
+  "Gernengasse",
+  "Gerspergasse",
+  "Gerstlgasse",
+  "Giefinggasse",
+  "Giseviusgasse",
+  "Gitlbauergasse",
+  "Glangasse",
+  "Gleichsaustraße",
+  "Gmündstraße",
+  "Grabmayrgasse",
+  "Gradingergasse",
+  "Graedenergasse",
+  "Graedenerweg",
+  "Gregor-Ulbrich-Gasse",
+  "Grellgasse",
+  "Grenzweg",
+  "Gretlgasse",
+  "Großbauerstraße",
+  "Großfeldstraße",
+  "Großschopfplatz",
+  "Gschweidlgasse",
+  "Guschelbauergasse",
+  "Gusengasse",
+  "Göpfritzgasse",
+  "Haberditzlgasse",
+  "Habitzlgasse",
+  "Hagenbrunner Straße",
+  "Hahnemanngasse",
+  "Haidschüttgasse",
+  "Hanreitergasse",
+  "Hans-Czermak-Gasse",
+  "Hans-Kutra-Gasse",
+  "Hans-Spitzy-Gasse",
+  "Hanslgasse",
+  "Hartwig-Balzen-Gasse",
+  "Haspingerplatz",
+  "Hassingergasse",
+  "Hasswellgasse",
+  "Hawlicekgasse",
+  "Hayekgasse",
+  "Hedwig-Lehnert-Hof",
+  "Heeresspital",
+  "Heidenreichsteinweg",
+  "Heingasse",
+  "Heinrich-Mitteis-Gasse",
+  "Heinrich-von-Buol-Gasse",
+  "Heinz-Nittel-Hof",
+  "Helene-Richter-Gasse",
+  "Helmholtzgasse",
+  "Henri-Dunant-Schule",
+  "Herbstweg",
+  "Herchenhahngasse",
+  "Heribert-Meisel-Gasse",
+  "Hermann-Bahr-Straße",
+  "Herrenholzgasse",
+  "Hertha-Kräftner-Gasse",
+  "Herzmanovsky-Orlando-Gasse",
+  "Heuschreckengasse",
+  "Hinaysgasse",
+  "Hochbahngasse",
+  "Hochfeldstraße",
+  "Hofherr-Schrantz-Gasse",
+  "Holetschekgasse",
+  "Holteigasse",
+  "Holzmanngasse",
+  "Holzmeistergasse",
+  "Hopfengasse",
+  "Hoßplatz",
+  "Hubertusgasse",
+  "Hufgasse",
+  "Hutterplatz",
+  "Höbarthgasse",
+  "Hühnersteig",
+  "Ichagasse",
+  "Ignaz-Köck-Straße",
+  "Illgasse",
+  "Immengasse",
+  "In den Gabrissen",
+  "In den kurzen Wiesthalen",
+  "In der Schwarzlackenau",
+  "In der goldenen Erden",
+  "Inge-Konradi-Gasse",
+  "Inwaldweg",
+  "Irenäusgasse",
+  "Iselgasse",
+  "Ispergasse",
+  "Jandagasse",
+  "Jane-Tilden-Gasse",
+  "Jara-Benes-Gasse",
+  "Jeannie-Ebner-Weg",
+  "Jedlersdorfer Platz",
+  "Jedlersdorfer Straße",
+  "Jedleseer Straße",
+  "Jeneweingasse",
+  "Jerusalemgasse",
+  "Jiricekgasse",
+  "Jochbergengasse",
+  "Johann-Knoll-Gasse",
+  "Johann-Laufner-Gasse",
+  "Johann-Orth-Platz",
+  "Johann-Orth-Weg",
+  "Johann-Treixler-Gasse",
+  "Johann-Weber-Straße",
+  "Johannes-de-La-Salle-Gasse",
+  "Josef-Baumann-Gasse",
+  "Josef-Brazdovics-Straße",
+  "Josef-Flandorfer-Straße",
+  "Josef-Melichar-Gasse",
+  "Josef-Ruston-Gasse",
+  "Josef-Türk-Gasse",
+  "Josef-Wakovsky-Gasse",
+  "Josef-Zapf-Gasse",
+  "Julius-Ficker-Straße",
+  "Julius-Schlegel-Gasse",
+  "Justgasse",
+  "Jöchlingergrund",
+  "Jürgenssenweg",
+  "KLG Allissen",
+  "KLG Alter Wiener 21",
+  "KLG Am Graedenerweg",
+  "KLG Am Mühlweg",
+  "KLG Am Mühlweg-ÖBB",
+  "KLG Am Stadlweg",
+  "KLG An der Heingasse",
+  "KLG An der Lebnergasse",
+  "KLG An der Ruthnergasse",
+  "KLG An der Strebersdorfer Straße",
+  "KLG An der Thayagasse",
+  "KLG An der Töllerschanze",
+  "KLG Blumenfreunde",
+  "KLG Breuer Siedlung",
+  "KLG Dirnelwiese",
+  "KLG Donaufelder Kleingärten",
+  "KLG Eigengründe nördlich am Petzgrund",
+  "KLG Frohes Schaffen",
+  "KLG Gartenfreunde Jedlesee",
+  "KLG Gisela",
+  "KLG Groß Jedlersdorf",
+  "KLG Gutfreund",
+  "KLG Im Äugel",
+  "KLG Im Äugl-Musteranlage",
+  "KLG In den oberen Falkenbergen",
+  "KLG Katharina Weiß",
+  "KLG Kleiner Damm",
+  "KLG Leopoldau (Gr.A)",
+  "KLG Leopoldau (Gr.SCH)",
+  "KLG Leopoldau (Gr.Ö)",
+  "KLG Leopoldau Ladestelle",
+  "KLG Leopoldau Werk 6",
+  "KLG Mautner Markhof",
+  "KLG Mitterhofergasse",
+  "KLG Obstfreunde",
+  "KLG Petzgrund",
+  "KLG Pragerstraße",
+  "KLG Satzingerweg",
+  "KLG Seidlgrund",
+  "KLG Semmelweis",
+  "KLG Spitzweg",
+  "KLG Stammersdorf Gruppe Süd",
+  "KLG Stammersdorf Gruppe West",
+  "KLG Transit",
+  "KLG ÖBB Floridsdorf 2051 (Strandbäder)",
+  "KLG ÖBB Floridsdorf 2051 (Unterer Bahnhof)",
+  "KLG ÖBB Floridsdorf-Siemensstraße 2063",
+  "KLG ÖBB Jedlersdorf 2055",
+  "KLG ÖBB Jedlesee 2057",
+  "KLG ÖBB Jedlesee-Werkstätte 2071",
+  "KLG ÖBB Landwirtschaft (Gr.95)",
+  "KLG ÖBB Schererstraße",
+  "KLG Ödenburgerstraße",
+  "KLG östlich Ruthnergasse 109",
+  "Kaftangasse",
+  "Kahlgasse",
+  "Kainachgasse",
+  "Kaingasse",
+  "Kallbrunnergasse",
+  "Kallusweg",
+  "Kalsergasse",
+  "Kammelweg",
+  "Kannweg",
+  "Kantnergasse",
+  "Karl-Aschenbrenner-Gasse",
+  "Karl-Benz-Weg",
+  "Karl-Biedermann-Gasse",
+  "Karl-Gramm-Gasse",
+  "Karl-Heinz-Hof",
+  "Karl-Humenberger-Gasse",
+  "Karl-Lothringer-Straße",
+  "Karl-Nieschlag-Gasse",
+  "Karl-Schott-Gasse",
+  "Karl-Schäfer-Straße",
+  "Karl-Seitz-Hof",
+  "Karl-Seitz-Platz",
+  "Karl-Waldbrunner-Platz",
+  "Kastnersiedlung",
+  "Katharina-Scheiter-Gasse",
+  "Katsushikastraße",
+  "Kefedergrundgasse",
+  "Kendegasse",
+  "Kerpengasse",
+  "Keynesgasse",
+  "Kinzerplatz",
+  "Kirchhoffgasse",
+  "Kishonweg",
+  "Klagergasse",
+  "Kleinhausgasse",
+  "Klemmweg",
+  "Klingenbachgasse",
+  "Klinik Floridsdorf",
+  "Klugerhof",
+  "Knaackgasse",
+  "Knöfelgasse",
+  "Kollarzgasse",
+  "Koloniestraße",
+  "Kommunikationsplatz",
+  "Kormorangasse",
+  "Koschakergasse",
+  "Koschiergasse",
+  "Kramreitergasse",
+  "Kravoglgasse",
+  "Kreuzfeldgasse",
+  "Krottenhofgasse",
+  "Kuenburggasse",
+  "Kugelfanggasse",
+  "Kuhschellenweg",
+  "Kummergasse",
+  "Königsteingasse",
+  "Kürschnergasse",
+  "Lafnitzgasse",
+  "Lamarckgasse",
+  "Lammaschgasse",
+  "Langenzersdorfer Straße",
+  "Langfeldgasse",
+  "Lavantgasse",
+  "Lazarsfeldgasse",
+  "Lebnergasse",
+  "Lehnertgasse",
+  "Leopold-Ferstl-Gasse",
+  "Leopold-Stroh-Sportanlage",
+  "Leopoldauer Platz",
+  "Leopoldauer Straße",
+  "Leopoldauer-Haide-Gasse",
+  "Leopoldine-Padaurek-Straße",
+  "Leuchsweg",
+  "Lhotskygasse",
+  "Liebleitnergasse",
+  "Lieleggweg",
+  "Liesneckgasse",
+  "Linke Nordbahngasse",
+  "Lisseeweg",
+  "Litschauweg",
+  "Lohnergasse",
+  "Lokomotivgasse",
+  "Lorettoplatz",
+  "Lormweg",
+  "Loschmidtgasse",
+  "Lottgasse",
+  "Louis-Häfliger-Gasse",
+  "Loulagasse",
+  "Lovaraweg",
+  "Luckenholzgasse",
+  "Luckenschwemmgasse",
+  "Lundenburger Gasse",
+  "Luschingasse",
+  "Maigasse",
+  "Maisgasse",
+  "Mallygasse",
+  "Malvengasse",
+  "Marco-Polo-Platz",
+  "Margarete-Schütte-Lihotzky-Hof",
+  "Marianne-und-Oskar-Pollak-Hof",
+  "Marie-Lang-Weg",
+  "Marinonigasse",
+  "Marischkapromenade",
+  "Marksteinergasse",
+  "Martha-Steffy-Browne-Gasse",
+  "Martin-Gaunersdorfer-Gasse",
+  "Maschkangasse",
+  "Matthias-Ernst-Pista-Gasse",
+  "Matthias-Wagner-Gasse",
+  "Matthäus-Jiszda-Straße",
+  "Maulwurfgasse",
+  "Max-Jellinek-Gasse",
+  "Maximilian-Reich-Weg",
+  "Maxwellgasse",
+  "Mayerweckstraße",
+  "Meistergasse",
+  "Mengergasse",
+  "Menzelstraße",
+  "Meriangasse",
+  "Meyerbeergasse",
+  "Michael-Dietmann-Gasse",
+  "Michael-Res'-Gasse",
+  "Michtnergasse",
+  "Mihatschgasse",
+  "Miklosichgasse",
+  "Milo-Dor-Weg",
+  "Mitterhofergasse",
+  "Mizzi-Günther-Weg",
+  "Mondsteinstraße",
+  "Morelligasse",
+  "Morettigasse",
+  "Moritz-Dreger-Gasse",
+  "Morsegasse",
+  "Mosheimergasse",
+  "Motesiczkyweg",
+  "Möllplatz",
+  "Mörthgasse",
+  "Mühlschüttelgasse",
+  "Mühlweg",
+  "Nekulagasse",
+  "Neudorfergasse",
+  "Neulandweg",
+  "Neusatzgasse",
+  "Nicole-Fontaine-Gasse",
+  "Nikolsburger Gasse",
+  "Norbert-Krebs-Gasse",
+  "Nordbahnanlage",
+  "Nordmanngasse",
+  "Novigasse",
+  "O'Brien-Gasse",
+  "Obere Jungenberggasse",
+  "Obergfellplatz",
+  "Oberhummergasse",
+  "Ocwirkgasse",
+  "Oellacherweg",
+  "Ohmgasse",
+  "Opalgasse",
+  "Orasteig",
+  "Orelgasse",
+  "Osergasse",
+  "Oskar-Czeija-Gasse",
+  "Oskar-Grissemann-Straße",
+  "Oskar-Helmer-Hof",
+  "Ostmarkgasse",
+  "Oswald-Redlich-Straße",
+  "Ottilie-Bondy-Promenade",
+  "Otto-Beyschlag-Gasse",
+  "Otto-Storch-Gasse",
+  "Owengasse",
+  "Pastorstraße",
+  "Patriagasse",
+  "Patrizigasse",
+  "Paukerwerkstraße",
+  "Paul-Grüninger-Schule",
+  "Paul-Hopfner-Gasse",
+  "Paul-Speiser-Hof",
+  "Pavlicekgasse",
+  "Peitlgasse",
+  "Penkgasse",
+  "Peter-Berner-Straße",
+  "Peter-Kaiser-Gasse",
+  "Petritschgasse",
+  "Pfarrer-Matz-Gasse",
+  "Pfarrer-Pasecker-Gasse",
+  "Pfendlergasse",
+  "Pichelwangergasse",
+  "Pilzgasse",
+  "Pinkagasse",
+  "Pitkagasse",
+  "Pius-Parsch-Platz",
+  "Plankenbüchlergasse",
+  "Platzergasse",
+  "Prager Straße",
+  "Pregartengasse",
+  "Preßburger Gasse",
+  "Prießnitzgasse",
+  "Puffergasse",
+  "Pulkaugasse",
+  "Puschkingasse",
+  "Puschmanngasse",
+  "Quarzweg",
+  "Rabnitzweg",
+  "Ragwurzgasse",
+  "Rappgasse",
+  "Rasmussengasse",
+  "Rathmayergasse",
+  "Ratzenhofergasse",
+  "Rautenkranzgasse",
+  "Rechte Nordbahngasse",
+  "Redlweg",
+  "Regnerweg",
+  "Rehgasse",
+  "Reisgasse",
+  "Richard-Neutra-Gasse",
+  "Rieglgasse",
+  "Rihosekgasse",
+  "Ringelseegasse",
+  "Rittingergasse",
+  "Robert-Dienst-Gasse",
+  "Robert-Lach-Gasse",
+  "Roda-Roda-Gasse",
+  "Roggegasse",
+  "Roman-Felleis-Gasse",
+  "Romaplatz",
+  "Rosa-Wien-Gasse",
+  "Rosannagasse",
+  "Rosenblattgasse",
+  "Rosenzeile",
+  "Rubingasse",
+  "Rudolf-Hitzinger-Hof",
+  "Rudolf-Raschke-Gasse",
+  "Rudolf-Schön-Weg",
+  "Rudolf-Virchow-Straße",
+  "Rudolf-Zöhrer-Weg",
+  "Ruppweg",
+  "Ruth-Brinkmann-Gasse",
+  "Ruthnergasse",
+  "Rußbergstraße",
+  "Röllgasse",
+  "SDL Donaufeld",
+  "SDL Dragonerhäufel",
+  "SDL Drnekweg",
+  "SP-Union Landhaus",
+  "Salamandergasse",
+  "Salomongasse",
+  "Salvigasse",
+  "Sandauergasse",
+  "Sandrockgasse",
+  "Sandthalenstraße",
+  "Sandtnergasse",
+  "Satzingerweg",
+  "Scheffelstraße",
+  "Schenkendorfgasse",
+  "Schererstraße",
+  "Scheydgasse",
+  "Schichtweg",
+  "Schillgasse",
+  "Schippergasse",
+  "Schleidengasse",
+  "Schleifgasse",
+  "Schliemanngasse",
+  "Schlimpweg",
+  "Schlingerhof",
+  "Schlossergasse",
+  "Schloßhofer Straße",
+  "Schnorrgasse",
+  "Schotterfeldweg",
+  "Schuchardtstraße",
+  "Schulzgasse",
+  "Schumpeterweg",
+  "Schwaigergasse",
+  "Schwanngasse",
+  "Schwarzenauweg",
+  "Schwarzer Weg",
+  "Schwemmäckergasse",
+  "Schönthalergasse",
+  "Schöpfleuthnergasse",
+  "Scottgasse",
+  "Sebaldgasse",
+  "Sebastian-Kohl-Gasse",
+  "Selma-Steinmetz-Gasse",
+  "Semmelweisgasse",
+  "Senderstraße",
+  "Seyringer Straße",
+  "Shuttleworthstraße",
+  "Siegfried-Marcus-Schule",
+  "Siegfriedgasse",
+  "Siemensplatz",
+  "Siemensstraße",
+  "Siemensweg",
+  "Sildgasse",
+  "Simmelgasse",
+  "Simone-Veil-Gasse",
+  "Sinawastingasse",
+  "Sintiweg",
+  "Skraupstraße",
+  "Smaragdgasse",
+  "Sommerweg",
+  "Sonderadresse 21.Bezirk",
+  "Sorgenthalgasse",
+  "Sowinetzgasse",
+  "Spanngasse",
+  "Sperbergasse",
+  "Spitzweg",
+  "Sportplatz Donaufeld",
+  "Sportplatz Nord Wien",
+  "Sportplatz Wasserpark-WAT 21",
+  "Sportweg",
+  "Spundagasse",
+  "Spöttlgasse",
+  "St.-Michael-Gasse",
+  "Staackmanngasse",
+  "Stadlweg",
+  "Stammersdorfer Kellergasse",
+  "Stammersdorfer Straße",
+  "Steidlgasse",
+  "Steinamangergasse",
+  "Steinbügelweg",
+  "Steinheilgasse",
+  "Stephensongasse",
+  "Stooßgasse",
+  "Stowassergasse",
+  "Strandgasse",
+  "Strebersdorfer Platz",
+  "Strebersdorfer Straße",
+  "Strohbogasse",
+  "Stromkilometer",
+  "Stryeckgasse",
+  "Stöhrgasse",
+  "Sumpfgasse",
+  "Sölchgasse",
+  "Tauschekgasse",
+  "Tetmajergasse",
+  "Thayagasse",
+  "Theodor-Körner-Gasse",
+  "Theumermarkt",
+  "Thomagasse",
+  "Tiefweg",
+  "Tilakstraße",
+  "Tomaschekstraße",
+  "Tonfabrikgasse",
+  "Topasplatz",
+  "Trauzlgasse",
+  "Triestinggasse",
+  "Trillergasse",
+  "Trisannagasse",
+  "Tschaikowskygasse",
+  "Tschechowgasse",
+  "Tulzergasse",
+  "Töllergasse",
+  "Türkenbundweg",
+  "Türkisgasse",
+  "U-Bahn Station Aderklaaer Straße",
+  "U-Bahn Station Großfeldsiedlung",
+  "U-Bahn Station Leopoldau",
+  "U-Bahn Station Neue Donau",
+  "U-Bahn Station Zentrum Floridsdorf",
+  "Uhlirzgasse",
+  "Uhugasse",
+  "Untere Jungenberggasse",
+  "Untere Sätzen",
+  "Verbindungsweg",
+  "Veterinärplatz",
+  "Viaduktbogen Thayagasse",
+  "Viehtriftgasse",
+  "Voglgasse",
+  "Vohburggasse",
+  "Voltagasse",
+  "Voltelinistraße",
+  "Wacholderweg",
+  "Wagramer Straße",
+  "Walkergasse",
+  "Wallnerweg",
+  "Waltenbergergasse",
+  "Walter-Schwarzacher-Gasse",
+  "Wankläckergasse",
+  "Wannemachergasse",
+  "Warhanekgasse",
+  "Wassermanngasse",
+  "Wasserpark",
+  "Wedekindgasse",
+  "Weilandgasse",
+  "Weinlich-Amann-Gasse",
+  "Weinsteiggasse",
+  "Weisselgasse",
+  "Weißenwolffgasse",
+  "Weißingergasse",
+  "Wenhartgasse",
+  "Werndlgasse",
+  "Werndlhof",
+  "Wettsteingasse",
+  "Wiener Gasse",
+  "Wildbadgasse",
+  "Wildgänsegasse",
+  "Wildnergasse",
+  "Wilhelm-Raab-Gasse",
+  "Winkeläckerstraße",
+  "Winkeläckerweg",
+  "Winterweg",
+  "Wohlfahrtsweg",
+  "Wolfersgrünweg",
+  "Wolfgang-Riese-Gasse",
+  "Wolfsschanzengasse",
+  "Wolsteingasse",
+  "Yehudi-Menuhin-Weg",
+  "Zallingergasse",
+  "Zaunscherbgasse",
+  "Zehdengasse",
+  "Zeilingerweg",
+  "Zelkinggasse",
+  "Ziegelofenweg",
+  "Znaimer Gasse",
+  "Zukunftsweg",
+  "Zwerchbreitelngasse",
+  "Äugelgasse",
+  "Ödenburger Straße",
+  "Überfuhrstraße"
+];
+const strassenDropdown = document.getElementById("strassen-vorschlaege");
+let strassenTreffer = [];
+let aktiverStrassenIndex = -1;
+function strassenSuchwert(text) {
+    return normalisiere(text).replace(/\s+/g, "");
+}
+function passendeStrassen(eingabe) {
+    const text = strassenSuchwert(eingabe);
+    if (!text) return [];
+    return STRASSENNAMEN.filter(name => strassenSuchwert(name).includes(text))
+        .sort((a, b) => Number(strassenSuchwert(b).startsWith(text)) - Number(strassenSuchwert(a).startsWith(text)) || a.localeCompare(b, "de-AT"))
+        .slice(0, 8);
+}
+function schliesseStrassenVorschlaege() {
+    strassenDropdown.hidden = true;
+    aktiverStrassenIndex = -1;
+    adressInput.setAttribute("aria-expanded", "false");
+    adressInput.removeAttribute("aria-activedescendant");
+}
+function waehleStrasse(name) {
+    verwerfeAlteRouten();
+    adressInput.value = name;
+    aktualisiereHausnummerHinweis();
+    adressInput.focus();
+    schliesseStrassenVorschlaege();
+}
+function zeigeStrassenVorschlaege() {
+    strassenTreffer = passendeStrassen(adressInput.value);
+    strassenDropdown.replaceChildren();
+    aktiverStrassenIndex = -1;
+    adressInput.removeAttribute("aria-activedescendant");
+    if (!strassenTreffer.length) { schliesseStrassenVorschlaege(); return; }
+    strassenTreffer.forEach((name, index) => {
+        const option = document.createElement("button");
+        option.type = "button";
+        option.id = `strassen-option-${index}`;
+        option.className = "strassen-option";
+        option.tabIndex = -1;
+        option.setAttribute("role", "option");
+        option.setAttribute("aria-selected", "false");
+        option.textContent = name;
+        // Fokus bleibt im Eingabefeld, sodass auch ein Mausklick zuverlässig auswählt.
+        option.addEventListener("mousedown", event => event.preventDefault());
+        option.addEventListener("click", () => waehleStrasse(name));
+        strassenDropdown.append(option);
+    });
+    strassenDropdown.hidden = false;
+    adressInput.setAttribute("aria-expanded", "true");
+}
+adressInput.addEventListener("input", zeigeStrassenVorschlaege);
+adressInput.addEventListener("focus", zeigeStrassenVorschlaege);
+adressInput.addEventListener("blur", event => {
+    if (!strassenDropdown.contains(event.relatedTarget)) schliesseStrassenVorschlaege();
+});
+adressInput.addEventListener("keydown", event => {
+    if (event.key === "Escape") { schliesseStrassenVorschlaege(); return; }
+    if (strassenDropdown.hidden) return;
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        event.preventDefault();
+        const count = strassenTreffer.length;
+        aktiverStrassenIndex = (aktiverStrassenIndex + (event.key === "ArrowDown" ? 1 : -1) + count) % count;
+        Array.from(strassenDropdown.children).forEach((option, index) => {
+            option.setAttribute("aria-selected", String(index === aktiverStrassenIndex));
+        });
+        const active = strassenDropdown.children[aktiverStrassenIndex];
+        adressInput.setAttribute("aria-activedescendant", active.id);
+        active.scrollIntoView({ block: "nearest" });
+    } else if (event.key === "Enter" && aktiverStrassenIndex >= 0) {
+        event.preventDefault();
+        waehleStrasse(strassenTreffer[aktiverStrassenIndex]);
+    }
+});
+routenForm.addEventListener("submit", schliesseStrassenVorschlaege);
+
+
+// Reale Beispieladressen aus dem vorhandenen Tankstellen-Datensatz.
+const ADRESS_BEISPIELE = [
+    ["Brünner Straße", "420"], ["Prager Straße", "138"],
+    ["Wagramer Straße", "179"], ["Einzingergasse", "2"],
+    ["Siemensstraße", "105b"], ["Shuttleworthstraße", "10"],
+    ["Donaufelder Straße", "135"], ["Leopoldauer Straße", "40"]
+];
+const hausnummerVorschlag = document.getElementById("hausnummer-vorschlag");
+const hausnummerPraefix = document.getElementById("hausnummer-praefix");
+const hausnummerBeispiel = document.getElementById("hausnummer-beispiel");
+const VORSCHLAG_INTERVALL_MS = 1750;
+let letztesAdressBeispiel = -1;
+let hinweisStrasse = null;
+let hinweisNummer = null;
+function wechsleAdressBeispiel() {
+    if (adressInput.value || document.hidden) return;
+    // Keine direkte Wiederholung der zuletzt gezeigten Adresse.
+    let index = Math.floor(Math.random() * (ADRESS_BEISPIELE.length - 1));
+    if (index >= letztesAdressBeispiel) index++;
+    index %= ADRESS_BEISPIELE.length;
+    letztesAdressBeispiel = index;
+    const [strasse, nummer] = ADRESS_BEISPIELE[index];
+    adressInput.placeholder = `${strasse} ${nummer}, 1210 Wien`;
+}
+function aktualisiereHausnummerHinweis(wechseln = false) {
+    const wert = adressInput.value;
+    const strasse = STRASSENNAMEN.find(name => strassenSuchwert(name) === strassenSuchwert(wert));
+    hausnummerVorschlag.hidden = !strasse;
+    if (!strasse) { hinweisStrasse = null; hinweisNummer = null; return; }
+    // Nur ein visueller Eingabehinweis. Keine Übernahme in den Wert oder die API-Anfrage.
+    const beispiel = ADRESS_BEISPIELE.find(([name]) => strassenSuchwert(name) === strassenSuchwert(strasse));
+    if (hinweisStrasse !== strasse) {
+        hinweisStrasse = strasse;
+        hinweisNummer = beispiel ? beispiel[1] : "12";
+    } else if (wechseln === true) {
+        // Illustrative Hausnummern, keine bestätigten Adressen und keine automatische Übernahme.
+        const nummern = ["2", "7", "12", "18", "24", "35"].filter(n => n !== hinweisNummer);
+        hinweisNummer = nummern[Math.floor(Math.random() * nummern.length)];
+    }
+    hausnummerPraefix.textContent = wert;
+    hausnummerBeispiel.textContent = `${/\s$/.test(wert) ? "" : " "}${hinweisNummer}`;
+    hausnummerPraefix.parentElement?.scrollTo({ left: adressInput.scrollLeft || 0 });
+}
+adressInput.addEventListener("input", aktualisiereHausnummerHinweis);
+adressInput.addEventListener("scroll", aktualisiereHausnummerHinweis);
+wechsleAdressBeispiel();
+function wechsleGrauenVorschlag() {
+    if (document.hidden) return;
+    if (!adressInput.value) wechsleAdressBeispiel();
+    else aktualisiereHausnummerHinweis(true);
+}
+setInterval(wechsleGrauenVorschlag, VORSCHLAG_INTERVALL_MS);
+
+
+// Erläuterung im Footer folgt denselben Parametern wie die Berechnung.
+document.getElementById("modell-verbrauch").textContent = COST_MODEL.consumptionLitersPer100Km.toLocaleString("de-AT");
+document.getElementById("modell-verschleiss").textContent = euro(COST_MODEL.wearCostPerKm);
